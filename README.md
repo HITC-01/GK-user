@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/HITC-01/ms-comment
+  - https://github.com/HITC-01/lf-player
+  - https://github.com/HITC-01/BP-related_tracks
+  - https://github.com/HITC-01/gk-user
 
 ## Table of Contents
 
