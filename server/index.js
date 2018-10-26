@@ -1,10 +1,11 @@
-const express = require('express')
-const app = express()
-const port = 3001
+const express = require ('express');
 
-app.use(express.static('client/dist'))
+const app = express();
+const port = 3001;
+
+app.use(express.static('client/dist'));
 
 
-app.listen(port, ()=>{
-  console.log('Listening to port 3001!')
-})
+app.listen(port, () => {
+  console.log('Listening to port 3001!');
+});
