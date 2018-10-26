@@ -6,8 +6,8 @@ DROP TABLE IF EXISTS users;
 		
 CREATE TABLE users (
   id int not null auto_increment,
-  pro INT,
-  isFollowing INT,
+  pro TEXT,
+  isFollowing TEXT,
   followers INT,
   trackCount INT,
   userName TEXT,
@@ -22,5 +22,6 @@ CREATE TABLE songs (
   id int not null auto_increment,
   userId INT,
   description TEXT,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  FOREIGN KEY (userId) REFERENCES users(id)
 );
