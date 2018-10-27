@@ -1,21 +1,23 @@
 const faker = require('faker');
 const Promise = require('bluebird');
+const path = require('path');
 const db = require('./index.js');
 
 const generator = () => {
   const result = [];
   for (let i = 0; i < 100; i += 1) {
-    const random = Math.floor(Math.random() * Math.floor(100));
+    const photoRandom = Math.floor(Math.random() * Math.floor(4));
+    const photoURL = path.join(__dirname, `/seeding/photos/user${photoRandom}.png`);
     const details = {
       pro: `${faker.random.boolean()}`,
       isFollowing: `${faker.random.boolean()}`,
       followers: faker.random.number(),
       trackCount: faker.random.number(),
       userName: faker.name.findName(),
-      profilePhoto: faker.image.people(),
+      profilePhoto: photoURL,
       location: `${faker.address.city()}, ${faker.address.country()}`,
       description: faker.lorem.paragraph(),
-      userRandomIdx: random,
+      userRandomIdx: faker.random.number({ min: 1, max: 100 }),
     };
     result.push(details);
   }

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "dev:react": "webpack -d --watch",
-    "db:setup": "mysql -u root <database/schema.sql; node database/seed.js"
+    "db:setup": "mysql -u root <database/schema.sql && node database/seed.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -36,6 +37,8 @@
     "jquery": "^3.2.1",
     "moment": "^2.22.2",
     "mysql": "^2.14.1",
+    "mysql-promise": "^5.0.0",
+    "promise-mysql": "^3.3.1",
     "underscore": "^1.8.3"
   }
 }
