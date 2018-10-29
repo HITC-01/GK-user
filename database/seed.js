@@ -6,17 +6,15 @@ const db = require('./index.js');
 const generator = () => {
   const result = [];
   for (let i = 0; i < 100; i += 1) {
-    const photoRandom = Math.floor(Math.random() * Math.floor(4));
-    const photoURL = path.join(__dirname, `/seeding/photos/user${photoRandom}.png`);
     const details = {
       pro: `${faker.random.boolean()}`,
       isFollowing: `${faker.random.boolean()}`,
-      followers: faker.random.number(),
-      trackCount: faker.random.number(),
+      followers: faker.random.number({ min: 1, max: 100 }),
+      trackCount: faker.random.number({ min: 1, max: 100 }),
       userName: faker.name.findName(),
-      profilePhoto: photoURL,
+      profilePhoto: faker.image.avatar(),
       location: `${faker.address.city()}, ${faker.address.country()}`,
-      description: faker.lorem.paragraph(),
+      description: faker.lorem.paragraphs(),
       userRandomIdx: faker.random.number({ min: 1, max: 100 }),
     };
     result.push(details);

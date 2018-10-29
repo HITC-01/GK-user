@@ -1,8 +1,7 @@
 import React from 'react';
-import $ from 'jquery';
 
 import TrackDescription from './trackDescription.jsx';
-import UserProfile from './userProfile.jsx'
+import UserProfile from './userProfile.jsx';
 
 class Page extends React.Component {
   constructor(props) {
@@ -12,47 +11,46 @@ class Page extends React.Component {
       songData: [],
     };
     this.getUserData = this.getUserData.bind(this);
+    this.getSongData = this.getSongData.bind(this);
   }
 
   componentDidMount() {
     const songId = Math.floor(Math.random() * 100) + 1;
     this.getSongData(songId)
-    .then((data)=> {
-      console.log(data);
-    }).catch(()=> {
-      console.log('error!');
-    })
+      .then(() => {
+        const item = this.state.songData[0].userId;
+        this.getUserData(item);
+      }).then(() => {
+        console.log('updated userData');
+      })
+      .catch(() => {
+        console.log('error!');
+      });
   }
 
   getSongData(id) {
     const url = `/songs/${id}`;
     return fetch(url, { method: 'GET' })
-      .then(stream => stream.json())
-      .then((res) => {
-        console.log('this is the res', res)
-        const { songData } = this.state;
-
-        this.setState({ songData: res.data });
+      .then(songData => songData.json())
+      .then((songData) => {
+        this.setState({ songData });
       });
   }
 
   getUserData(id) {
-    const url = `/user/${id}`;
-    return fetch (url, { method: 'GET' })
+    const url = `/users/${id}`;
+    return fetch(url, { method: 'GET' })
       .then(profile => profile.json())
-      .then((res) => {
-        this.setState({
-          userInfo: res,
-        });
+      .then((userData) => {
+        this.setState({ userData });
       });
   }
 
   render() {
     return (
-      <div>
-        <h1>Testing</h1>
-        <UserProfile />
-        <TrackDescription />
+      <div className="up-app">
+        <UserProfile userData={this.state.userData} />
+        <TrackDescription songData={this.state.songData} />
       </div>
     );
   }

@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TrackDescription = () => {
+const TrackDescription = ({ songData }) => {
+  const data = songData[0] || {};
+  const message = data.description || '';
+
   return (
-    <div>
-      <h2> Hello from Track Description</h2>
+    <div className="up-td-div">
+      <p className="up-trackdescription">{message}</p>
+      <button> Show more </button>
     </div>
-  )
-}
+  );
+};
 
 export default TrackDescription;
+
+TrackDescription.propTypes = {
+  songData: PropTypes.instanceOf(Array)
+}
