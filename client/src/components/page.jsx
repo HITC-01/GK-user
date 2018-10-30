@@ -61,12 +61,14 @@ class Page extends React.Component {
   render() {
     return (
       <div className="up-app">
-        <UserProfile 
+        <UserProfile
           following={this.state.isFollowing} 
           handleFollow={this.handleFollow} 
           userData={this.state.userData}
         />
-        <TrackDescription songData={this.state.songData} />
+        <TrackDescription
+          songData={this.state.songData}
+        />
       </div>
     );
   }
