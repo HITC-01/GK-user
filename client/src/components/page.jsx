@@ -7,8 +7,8 @@ class Page extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userData: [],
-      songData: [],
+      userData: {},
+      songData: {},
       isFollowing: true,
     };
     this.getUserData = this.getUserData.bind(this);
@@ -21,10 +21,10 @@ class Page extends React.Component {
     const songId = Math.floor(Math.random() * 100) + 1;
     this.getSongData(songId)
       .then(() => {
-        const item = this.state.songData[0].userId;
+        const item = this.state.songData.userId;
         this.getUserData(item);
       }).then(() => {
-        const follow = this.state.userData[0].isFollowing
+        const follow = this.state.userData.isFollowing
         this.setState({isFollowing: follow })
         console.log('updated userData');
       })
@@ -37,7 +37,8 @@ class Page extends React.Component {
     const url = `/songs/${id}`;
     return fetch(url, { method: 'GET' })
       .then(songData => songData.json())
-      .then((songData) => {
+      .then((songDataArr) => {
+        const songData = songDataArr[0];
         this.setState({ songData });
       });
   }
@@ -46,7 +47,8 @@ class Page extends React.Component {
     const url = `/users/${id}`;
     return fetch(url, { method: 'GET' })
       .then(profile => profile.json())
-      .then((userData) => {
+      .then((userDataArr) => {
+        const userData = userDataArr[0];
         this.setState({ userData });
       });
   }

@@ -23,7 +23,7 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    const data = this.props.userData[0] || {};
+    const data = this.props.userData || {};
     let followStatus = '' || 'Loading';
     let bolt = '';
     let username = data.userName || '';
@@ -88,5 +88,5 @@ class UserProfile extends React.Component {
 export default UserProfile;
 
 UserProfile.propTypes = {
-  userData: PropTypes.instanceOf(Array),
+  userData: PropTypes.instanceOf(Object),
 };

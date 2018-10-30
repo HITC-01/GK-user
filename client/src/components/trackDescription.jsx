@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const TrackDescription = ({ songData }) => {
-  const data = songData[0] || {};
+  const data = songData || {};
   const message = data.description || '';
 
   return (
@@ -16,5 +16,5 @@ const TrackDescription = ({ songData }) => {
 export default TrackDescription;
 
 TrackDescription.propTypes = {
-  songData: PropTypes.instanceOf(Array)
+  songData: PropTypes.instanceOf(Object)
 }
