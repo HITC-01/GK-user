@@ -38,7 +38,7 @@
   color:grey;
 }
 
-.up-button-follow{
+.up-button-true{
   background-color: #f50;
   border-color: #f50;
   color: #fff;
@@ -51,7 +51,7 @@
   line-height: 16px;
 }
 
-.up-button-unfollow{
+.up-button-false{
   background-color: #ffff;
   border: 1px solid #e5e5e5;
   color: #f50;

@@ -9,10 +9,12 @@ class Page extends React.Component {
     this.state = {
       userData: [],
       songData: [],
+      isFollowing: true,
     };
     this.getUserData = this.getUserData.bind(this);
     this.getSongData = this.getSongData.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleFollow = this.handleFollow.bind(this);
   }
 
   componentDidMount() {
@@ -22,6 +24,8 @@ class Page extends React.Component {
         const item = this.state.songData[0].userId;
         this.getUserData(item);
       }).then(() => {
+        const follow = this.state.userData[0].isFollowing
+        this.setState({isFollowing: follow })
         console.log('updated userData');
       })
       .catch(() => {
@@ -51,10 +55,16 @@ class Page extends React.Component {
     console.log('an item was clicked!')
   }
 
+  handleFollow() {
+   const {isFollowing} = this.state;
+   this.setState({isFollowing: !isFollowing});
+  }
+
+
   render() {
     return (
       <div className="up-app">
-        <UserProfile userData={this.state.userData} />
+        <UserProfile following={this.state.isFollowing} handleFollow={this.handleFollow} userData={this.state.userData} />
         <TrackDescription songData={this.state.songData} />
       </div>
     );

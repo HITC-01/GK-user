@@ -15,15 +15,11 @@ class UserProfile extends React.Component {
   }
 
   showModal() {
-    // debugger;
     this.setState({ show: true });
-    // debugger;
   }
 
   hideModal() {
-    // debugger;
     this.setState({ show: false });
-    // debugger;
   }
 
   render() {
@@ -31,12 +27,7 @@ class UserProfile extends React.Component {
     let followStatus = '' || 'Loading';
     let bolt = '';
     let username = data.userName || '';
-    if (data.isFollowing === 'true') {
-      followStatus = 'Following';
-    } else {
-      followStatus = 'Follow';
-    }
-  
+
     if (data.pro === 'true') {
       bolt = <i className="fas fa-bolt" />;
     }
@@ -45,15 +36,15 @@ class UserProfile extends React.Component {
       username = data.userName.slice(0, 10).concat('...');
     }
   
-    if (data.isFollowing === 'false') {
+    if (this.props.following) {
       followStatus = (
-        <button type="button" className="up-button-unfollow" tabIndex="0" title="Following">
+        <button type="button" className="up-button-unfollow" tabIndex="0" title="Following" onClick={this.props.handleFollow}>
       Following
         </button>
       );
     } else {
       followStatus = (
-        <button type="button" className="up-button-follow" tabIndex="0" title="Follow">
+        <button type="button" className="up-button-follow" tabIndex="0" title="Follow" onClick={this.props.handleFollow}>
       Follow
         </button>
       );
