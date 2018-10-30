@@ -18,3 +18,4 @@ export default TrackDescription;
 TrackDescription.propTypes = {
   songData: PropTypes.instanceOf(Object).isRequired,
 };
+
