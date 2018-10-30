@@ -7,21 +7,24 @@ class Page extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userData: [],
-      songData: [],
+      userData: {},
+      songData: {},
+      isFollowing: true,
     };
     this.getUserData = this.getUserData.bind(this);
     this.getSongData = this.getSongData.bind(this);
+    this.handleFollow = this.handleFollow.bind(this);
   }
 
   componentDidMount() {
     const songId = Math.floor(Math.random() * 100) + 1;
     this.getSongData(songId)
       .then(() => {
-        const item = this.state.songData[0].userId;
-        this.getUserData(item);
+        const { songData } = this.state;
+        const { userId } = songData;
+        this.getUserData(userId);
       }).then(() => {
-        console.log('updated userData');
+        console.log('items included');
       })
       .catch(() => {
         console.log('error!');
@@ -32,7 +35,8 @@ class Page extends React.Component {
     const url = `/songs/${id}`;
     return fetch(url, { method: 'GET' })
       .then(songData => songData.json())
-      .then((songData) => {
+      .then((songDataArr) => {
+        const songData = songDataArr[0];
         this.setState({ songData });
       });
   }
@@ -41,15 +45,27 @@ class Page extends React.Component {
     const url = `/users/${id}`;
     return fetch(url, { method: 'GET' })
       .then(profile => profile.json())
-      .then((userData) => {
-        this.setState({ userData });
+      .then((userDataArr) => {
+        const userData = userDataArr[0];
+        const { isFollowing } = userData;
+        this.setState({ userData, isFollowing });
       });
   }
+
+  handleFollow() {
+    const { isFollowing } = this.state;
+    this.setState({ isFollowing: !isFollowing });
+  }
+
 
   render() {
     return (
       <div className="up-app">
-        <UserProfile userData={this.state.userData} />
+        <UserProfile 
+          following={this.state.isFollowing} 
+          handleFollow={this.handleFollow} 
+          userData={this.state.userData}
+        />
         <TrackDescription songData={this.state.songData} />
       </div>
     );

@@ -1,72 +1,73 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import ReportPage from './reportPage.jsx'
 
-const UserProfile = ({ userData }) => {
-  const data = userData[0] || {};
-  let followStatus = '' || 'Loading';
-  let bolt = '';
-  let username = data.userName || '';
-  if (data.isFollowing === 'true') {
-    followStatus = 'Following';
-  } else {
-    followStatus = 'Follow';
+class UserProfile extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false,
+    };
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
-  if (data.pro === 'true') {
-    bolt = <i className="fas fa-bolt" />;
+  showModal() {
+    this.setState({ show: true });
   }
 
-  if (data.userName && data.userName.length > 13) {
-    username = data.userName.slice(0, 10).concat('...');
+  hideModal() {
+    this.setState({ show: false });
   }
 
-  if (data.isFollowing === 'false') {
-    followStatus = (
-      <button type="button" className="up-button-unfollow" tabIndex="0" title="Unfollow">
-    Following
-      </button>
-    );
-  } else {
-    followStatus = (
-      <button type="button" className="up-button-follow" tabIndex="0" title="Follow">
-    Follow
-      </button>
-    );
-  }
-
-  return (
-    <div className="up">
-      <img className="up-photo" src={data.profilePhoto} alt="Loading" />
-      <br />
-      <span className="up-username">
-        {username}
-      </span>
-      <span className="up-bolt">
-        {bolt}
-      </span>
-      <br />
-      <div className="up-count">
-        <span className="up-followcount">
+  render() {
+    const { userData, following, handleFollow } = this.props;
+    const data = userData || {};
+    const followStatus = following ? 'following' : 'follow';
+    const proBolt = data.pro === 'true' ? <i className="fas fa-bolt" /> : '';
+    const username = data.userName && data.userName.length > 13 ? data.userName.slice(0, 10).concat('...') : data.userName;
+    return (
+      <div className="up">
+        <img className="up-photo" src={data.profilePhoto} alt="Loading" />
+        <br />
+        <span className="up-username">
+          {username}
+        </span>
+        <span className="up-bolt">
+          {proBolt}
+        </span>
+        <br />
+        <div className="up-count">
           <i className="fas fa-users" />
-          {data.followers}
-        </span>
-        <span className="up-trackcount">
+          <span className="up-followcount up-txt">
+            {data.followers}
+          </span>
           <i className="fas fa-headphones-alt" />
-          {data.trackCount}
-        </span>
+          <span className="up-trackcount up-txt">
+            {data.trackCount}
+          </span>
+        </div>
+        <br />
+        <button type="button" className={`up-button-${followStatus}`} tabIndex="0" title="Following" onClick={handleFollow}>
+          { followStatus }
+        </button>
+        <br />
+        <div id="up-report-sign">
+          <i className="far fa-flag" />
+          <button type="button" onClick={this.showModal} className="up-report-button up-txt" onKeyDown={this.handleClick}>
+            Report
+          </button>
+          <ReportPage show={this.state.show} handleClose={this.hideModal} />
+        </div>
       </div>
-      <br />
-      {followStatus}
-      <div id="up-report-sign">
-        <i className="far fa-flag" />
-        Report!
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 export default UserProfile;
 
 UserProfile.propTypes = {
-  userData: PropTypes.instanceOf(Array),
+  userData: PropTypes.instanceOf(Object).isRequired,
+  handleFollow: PropTypes.func.isRequired,
 };
+

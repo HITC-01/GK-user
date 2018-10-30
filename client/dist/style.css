@@ -2,11 +2,17 @@
   font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif
 }
 
+.up {
+  padding: 10px;
+  border: 1px;
+}
+
 .up-td-div {
   width: 80%;
   margin: 10px 10px;
   max-width: 1000px;
 }
+
 .up-trackdescription {
   margin: 10px;
   font-size: 14px;
@@ -19,40 +25,32 @@
   flex-direction: row;
 }
 
-
-.up{
-  padding: 10px;
-  border: 1px;
-}
-
 .up-followcount{
   width: 20px;
-  margin: 10px 0px;
+  padding: 0px 10px 0px 5px;
   color:grey;
 }
 
 .up-trackcount{
   width: 50px;
-  margin: 10px;
+  margin: 0px 7px;
   color:grey;
 }
 
-.up-button-follow{
-  background-color: #f50;
-  border-color: #f50;
-  color: #fff;
-  white-space: nowrap;
-  text-align: center;
-  box-sizing: border-box;
+.up-report-button {
+  border: none;
+  background-color: inherit;
+  padding: 5px 5px;
   font-size: 11px;
-  padding: 2px 9px 2px 8px;
-  height: 22px;
-  line-height: 16px;
+  color: grey;
+  cursor: pointer;
+  display: inline-block;
 }
 
-.up-button-unfollow{
-  background-color: #ffff;
-  border-color: #f50;
+.up-button-following {
+  background-color: white;
+  border-radius: 20%;
+  border: 1px solid #e5e5e5;
   color: #f50;
   white-space: nowrap;
   text-align: center;
@@ -63,16 +61,32 @@
   line-height: 16px;
 }
 
-.up-followcount:hover{
-  color:black;
-}
-.up-trackcount:hover{
-  color:black;
+.up-button-follow {
+  background-color: #f50;
+  border-radius: 20%;
+  border: 1px solid #e5e5e5;
+  color: white;
+  white-space: nowrap;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 11px;
+  padding: 2px 9px 2px 8px;
+  height: 22px;
+  line-height: 16px;
 }
 
+.up-bt-show-more{
+  border: none;
+  font-size: 11px;
+  color: grey;
+}
 
 .up-photo{
   border-radius: 80%;
+}
+
+.up-bolt {
+  color: #f50;
 }
 
 .up-username {
@@ -85,5 +99,36 @@
 }
 
 
+/* modal features */
+.up-modalWrapper {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
 
+.up-modal {
+  display: block;
+  border-radius: 1%;
+  position: absolute;
+  top: 20px;
+  width: 50%;
+  background-color: white;
+}
 
+.up-display-none {
+  display: none;
+}
+
+/* hover features */
+
+.up-txt:hover{
+  color:black;
+}
+.up-button-following:hover{
+  border-color: #f50
+}
