@@ -52,7 +52,6 @@ class Page extends React.Component {
       });
   }
 
-
   handleFollow() {
     const { isFollowing } = this.state;
     this.setState({ isFollowing: !isFollowing });
