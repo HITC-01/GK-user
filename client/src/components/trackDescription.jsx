@@ -8,7 +8,7 @@ const TrackDescription = ({ songData }) => {
   return (
     <div className="up-td-div">
       <p className="up-trackdescription">{message}</p>
-      <button> Show more </button>
+      <button type="button" className="up-bt-show-more"> Show more </button>
     </div>
   );
 };
@@ -16,5 +16,5 @@ const TrackDescription = ({ songData }) => {
 export default TrackDescription;
 
 TrackDescription.propTypes = {
-  songData: PropTypes.instanceOf(Object)
-}
+  songData: PropTypes.instanceOf(Object).isRequired,
+};

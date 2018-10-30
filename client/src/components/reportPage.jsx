@@ -1,22 +1,45 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const ReportPage = ({handleClose, show}) => {
+const ReportPage = ({ handleClose, show }) => {
   const showHideClassName = show ? '' : 'display-none';
   return (
-    <div className={`up-modalWrapper ${showHideClassName}`}>
-      <div className="modal">
+    <div className={`up-modalWrapper up-${showHideClassName}`}>
+      <div className="up-modal">
         <section className="up-modal-report">
+          <h1> Report Track For </h1>
+          <br />
           <ul>
-            <li> 1. Copyright infringement </li>
-            <li> 2. Privacy Violation </li>
-            <li> 3. Pornographic Content </li>
-            <li> 4. Abuse </li>
-            <li> 5. Hate Speech </li>
-            <li> 6. Illegal Content </li>
-            <li> 7. Other </li>
+            <li>
+              <a href="www.google.com"> Copyright infringement </a>
+            </li>
+            <br />
+            <li>
+              <a href="www.google.com"> Privacy Violation </a>
+            </li>
+            <br />
+            <li>
+              <a href="www.google.com"> Pornographic Content </a>
+            </li>
+            <br />
+            <li>
+              <a href="www.google.com"> Abuse </a>
+            </li>
+            <br />
+            <li>
+              <a href="www.google.com"> Hate Speech </a>
+            </li>
+            <br />
+            <li>
+              <a href="www.google.com"> Illegal Content </a>
+            </li>
+            <br />
+            <li>
+              <a href="www.google.com"> Other </a>
+            </li>
           </ul>
         </section>
-        <button className="up-close" onClick={handleClose} type="button"> Close </button>
+        <button className="up-close" onClick={handleClose} type="button"> X </button>
       </div>
     </div>
   );
@@ -24,3 +47,8 @@ const ReportPage = ({handleClose, show}) => {
 
 
 export default ReportPage;
+
+ReportPage.propTypes = {
+  show: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired,
+};

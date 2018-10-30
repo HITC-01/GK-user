@@ -13,7 +13,6 @@ class Page extends React.Component {
     };
     this.getUserData = this.getUserData.bind(this);
     this.getSongData = this.getSongData.bind(this);
-    this.handleClick = this.handleClick.bind(this);
     this.handleFollow = this.handleFollow.bind(this);
   }
 
@@ -21,12 +20,11 @@ class Page extends React.Component {
     const songId = Math.floor(Math.random() * 100) + 1;
     this.getSongData(songId)
       .then(() => {
-        const item = this.state.songData.userId;
-        this.getUserData(item);
+        const { songData } = this.state;
+        const { userId } = songData;
+        this.getUserData(userId);
       }).then(() => {
-        const follow = this.state.userData.isFollowing
-        this.setState({isFollowing: follow })
-        console.log('updated userData');
+        console.log('items included');
       })
       .catch(() => {
         console.log('error!');
@@ -49,17 +47,15 @@ class Page extends React.Component {
       .then(profile => profile.json())
       .then((userDataArr) => {
         const userData = userDataArr[0];
-        this.setState({ userData });
+        const { isFollowing } = userData;
+        this.setState({ userData, isFollowing });
       });
   }
 
-  handleClick() {
-    console.log('an item was clicked!')
-  }
 
   handleFollow() {
-   const {isFollowing} = this.state;
-   this.setState({isFollowing: !isFollowing});
+    const { isFollowing } = this.state;
+    this.setState({ isFollowing: !isFollowing });
   }
 
 

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import ReportPage from './reportPage.jsx'
 
-
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
@@ -23,33 +22,11 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    const data = this.props.userData || {};
-    let followStatus = '' || 'Loading';
-    let bolt = '';
-    let username = data.userName || '';
-
-    if (data.pro === 'true') {
-      bolt = <i className="fas fa-bolt" />;
-    }
-  
-    if (data.userName && data.userName.length > 13) {
-      username = data.userName.slice(0, 10).concat('...');
-    }
-  
-    if (this.props.following) {
-      followStatus = (
-        <button type="button" className="up-button-unfollow" tabIndex="0" title="Following" onClick={this.props.handleFollow}>
-      Following
-        </button>
-      );
-    } else {
-      followStatus = (
-        <button type="button" className="up-button-follow" tabIndex="0" title="Follow" onClick={this.props.handleFollow}>
-      Follow
-        </button>
-      );
-    }
-  
+    const { userData, following, handleFollow } = this.props;
+    const data = userData || {};
+    const followStatus = following ? 'following' : 'follow';
+    const proBolt = data.pro === 'true' ? <i className="fas fa-bolt" /> : '';
+    const username = data.userName && data.userName.length > 13 ? data.userName.slice(0, 10).concat('...') : data.userName;
     return (
       <div className="up">
         <img className="up-photo" src={data.profilePhoto} alt="Loading" />
@@ -58,35 +35,38 @@ class UserProfile extends React.Component {
           {username}
         </span>
         <span className="up-bolt">
-          {bolt}
+          {proBolt}
         </span>
         <br />
         <div className="up-count">
           <i className="fas fa-users" />
-          <span className="up-followcount">
+          <span className="up-followcount up-txt">
             {data.followers}
           </span>
           <i className="fas fa-headphones-alt" />
-          <span className="up-trackcount">
+          <span className="up-trackcount up-txt">
             {data.trackCount}
           </span>
         </div>
         <br />
-        {followStatus}
+        <button type="button" className={`up-button-${followStatus}`} tabIndex="0" title="Following" onClick={handleFollow}>
+          { followStatus }
+        </button>
         <br />
         <div id="up-report-sign">
           <i className="far fa-flag" />
-          <span onClick={this.showModal} className="up-report-word">
-            Report!
-            </span>
-            <ReportPage show={this.state.show} handleClose={this.hideModal} />
+          <button type="button" onClick={this.showModal} className="up-report-button up-txt" onKeyDown={this.handleClick}>
+            Report
+          </button>
+          <ReportPage show={this.state.show} handleClose={this.hideModal} />
         </div>
       </div>
-      );
-    }
+    );
+  }
 }
 export default UserProfile;
 
 UserProfile.propTypes = {
-  userData: PropTypes.instanceOf(Object),
+  userData: PropTypes.instanceOf(Object).isRequired,
+  handleFollow: PropTypes.func.isRequired,
 };
