@@ -12,6 +12,7 @@ class Page extends React.Component {
     };
     this.getUserData = this.getUserData.bind(this);
     this.getSongData = this.getSongData.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -44,6 +45,10 @@ class Page extends React.Component {
       .then((userData) => {
         this.setState({ userData });
       });
+  }
+
+  handleClick() {
+    console.log('an item was clicked!')
   }
 
   render() {

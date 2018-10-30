@@ -2,11 +2,18 @@
   font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif
 }
 
+.up{
+  font: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  padding: 10px;
+  border: 1px;
+}
+
 .up-td-div {
   width: 80%;
   margin: 10px 10px;
   max-width: 1000px;
 }
+
 .up-trackdescription {
   margin: 10px;
   font-size: 14px;
@@ -19,21 +26,15 @@
   flex-direction: row;
 }
 
-
-.up{
-  padding: 10px;
-  border: 1px;
-}
-
 .up-followcount{
   width: 20px;
-  margin: 10px 0px;
+  padding: 0px 10px 0px 5px;
   color:grey;
 }
 
 .up-trackcount{
   width: 50px;
-  margin: 10px;
+  margin: 0px 7px;
   color:grey;
 }
 
@@ -52,7 +53,7 @@
 
 .up-button-unfollow{
   background-color: #ffff;
-  border-color: #f50;
+  border: 1px solid #e5e5e5;
   color: #f50;
   white-space: nowrap;
   text-align: center;
@@ -63,6 +64,9 @@
   line-height: 16px;
 }
 
+.up-button-unfollow:hover{
+  border-color: #f50
+}
 .up-followcount:hover{
   color:black;
 }
@@ -70,9 +74,12 @@
   color:black;
 }
 
-
 .up-photo{
   border-radius: 80%;
+}
+
+.up-bolt {
+  color: #f50;
 }
 
 .up-username {
@@ -84,6 +91,48 @@
   text-transform: uppercase;
 }
 
+.up-report-word{
+  padding: 0px 6px;
+  color:#666;
+}
 
 
+.up-report-word:hover{
+  color:black;
+}
 
+.up-modalWrapper {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.up-modal-report{
+  height: 50%;
+  width: 50%;
+}
+
+.modal-main {
+  position:fixed;
+  background: white;
+  width: 80%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.modal {
+  display: block;
+  height:50%;
+  width: 50%;
+  background-color: white;
+}
+
+.display-none {
+  display: none;
+}
