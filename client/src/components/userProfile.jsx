@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ReportPage from './reportPage.jsx'
+import ReportPage from './reportPage.jsx';
 
 class UserProfile extends React.Component {
   constructor(props) {
