@@ -1,6 +1,5 @@
 const faker = require('faker');
 const Promise = require('bluebird');
-const path = require('path');
 const db = require('./index.js');
 
 const generator = () => {

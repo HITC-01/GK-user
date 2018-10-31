@@ -47,7 +47,12 @@ class Page extends React.Component {
       .then(profile => profile.json())
       .then((userDataArr) => {
         const userData = userDataArr[0];
-        const { isFollowing } = userData;
+        let { isFollowing } = userData;
+        if (isFollowing === 'true') {
+          isFollowing = true;
+        } else {
+          isFollowing = false;
+        }
         this.setState({ userData, isFollowing });
       });
   }
@@ -63,7 +68,7 @@ class Page extends React.Component {
     return (
       <div className="up-app">
         <UserProfile
-          following={isFollowing}
+          isFollowing={isFollowing}
           handleFollow={this.handleFollow}
           userData={userData}
         />

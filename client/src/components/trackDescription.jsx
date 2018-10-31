@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import HashTag from './hashtag.jsx';
+
 const TrackDescription = ({ songData }) => {
   const data = songData || {};
   const message = data.description || '';
@@ -8,6 +10,8 @@ const TrackDescription = ({ songData }) => {
   return (
     <div className="up-td-div">
       <p className="up-trackdescription">{message}</p>
+      <HashTag />
+      <br />
       <button type="button" className="up-bt-show-more"> Show more </button>
     </div>
   );

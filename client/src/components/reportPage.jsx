@@ -13,27 +13,21 @@ const ReportPage = ({ handleClose, show }) => {
             <li>
               <a href="www.google.com"> Copyright infringement </a>
             </li>
-            <br />
             <li>
               <a href="www.google.com"> Privacy Violation </a>
             </li>
-            <br />
             <li>
               <a href="www.google.com"> Pornographic Content </a>
             </li>
-            <br />
             <li>
               <a href="www.google.com"> Abuse </a>
             </li>
-            <br />
             <li>
               <a href="www.google.com"> Hate Speech </a>
             </li>
-            <br />
             <li>
               <a href="www.google.com"> Illegal Content </a>
             </li>
-            <br />
             <li>
               <a href="www.google.com"> Other </a>
             </li>
@@ -44,7 +38,6 @@ const ReportPage = ({ handleClose, show }) => {
     </div>
   );
 };
-
 
 export default ReportPage;
 

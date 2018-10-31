@@ -13,6 +13,25 @@
   max-width: 1000px;
 }
 
+.up-td-hash {
+  content: "#";
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  padding: 0 7px;
+  background: #999;
+  border: 1px solid #999;
+  border-left-width: 0;
+  color: #fff;
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
 .up-trackdescription {
   margin: 10px;
   font-size: 14px;
@@ -25,13 +44,13 @@
   flex-direction: row;
 }
 
-.up-followcount{
+.up-followcount {
   width: 20px;
   padding: 0px 10px 0px 5px;
   color:grey;
 }
 
-.up-trackcount{
+.up-trackcount {
   width: 50px;
   margin: 0px 7px;
   color:grey;
@@ -47,7 +66,7 @@
   display: inline-block;
 }
 
-.up-button-following{
+.up-button-following {
   background-color: white;
   border-radius: 20%;
   border: 1px solid #e5e5e5;
@@ -61,7 +80,7 @@
   line-height: 16px;
 }
 
-.up-button-follow{
+.up-button-follow {
   background-color: #f50;
   border-radius: 20%;
   border: 1px solid #e5e5e5;
@@ -75,13 +94,13 @@
   line-height: 16px;
 }
 
-.up-bt-show-more{
+.up-bt-show-more {
   border: none;
   font-size: 11px;
   color: grey;
 }
 
-.up-photo{
+.up-photo {
   border-radius: 80%;
 }
 
@@ -126,9 +145,9 @@
 
 /* hover features */
 
-.up-txt:hover{
+.up-txt:hover {
   color:black;
 }
-.up-button-following:hover{
+.up-button-following:hover {
   border-color: #f50
 }

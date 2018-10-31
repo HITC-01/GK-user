@@ -80,12 +80,12 @@ export default UserProfile;
 
 UserProfile.propTypes = {
   userData: PropTypes.instanceOf(Object),
-  isFollowing: PropTypes.string,
+  isFollowing: PropTypes.bool,
   handleFollow: PropTypes.func,
 };
 
 UserProfile.defaultProps = {
   userData: {},
-  isFollowing: 'false',
+  isFollowing: false,
   handleFollow: {},
 };
