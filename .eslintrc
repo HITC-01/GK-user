@@ -1,5 +1,14 @@
 {
   "extends": "airbnb",
   "parser": "babel-eslint",
-  "globals": { "fetch": false }
+  "globals": { "fetch": false },
+  "plugins": [
+    "jest"
+  ],
+  "env" : {
+    "es6" :true,
+    "browser":true,
+    "jest/globals":true
+  }
 }
+ 

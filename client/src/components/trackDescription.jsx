@@ -15,7 +15,6 @@ const TrackDescription = ({ songData }) => {
 
 export default TrackDescription;
 
-TrackDescription.propTypes = {
-  songData: PropTypes.instanceOf(Object).isRequired,
-};
-
+// TrackDescription.propTypes = {
+//   songData: PropTypes.instanceOf(Object).isRequired,
+// };

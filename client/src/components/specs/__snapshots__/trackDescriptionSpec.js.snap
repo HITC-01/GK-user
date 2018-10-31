@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrackDescription /> Should render correctly 1`] = `
+<div
+  className="up-td-div"
+>
+  <p
+    className="up-trackdescription"
+  >
+    
+  </p>
+  <button
+    className="up-bt-show-more"
+    type="button"
+  >
+     Show more 
+  </button>
+</div>
+`;

@@ -67,8 +67,10 @@ class UserProfile extends React.Component {
 export default UserProfile;
 
 UserProfile.propTypes = {
-  userData: PropTypes.instanceOf(Object).isRequired,
-  handleFollow: PropTypes.func.isRequired,
-  following: PropTypes.string.isRequired,
+  userData: PropTypes.instanceOf(Object),
+  handleFollow: PropTypes.func,
 };
 
+UserProfile.defaultProps = {
+  userData : {}
+}

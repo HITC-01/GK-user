@@ -48,7 +48,7 @@ const ReportPage = ({ handleClose, show }) => {
 
 export default ReportPage;
 
-ReportPage.propTypes = {
-  show: PropTypes.bool.isRequired,
-  handleClose: PropTypes.func.isRequired,
-};
+// ReportPage.propTypes = {
+//   show: PropTypes.bool.isRequired,
+//   handleClose: PropTypes.func.isRequired,
+// };
