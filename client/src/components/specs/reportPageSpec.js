@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ReportPage from '../ReportPage.jsx';
+import ReportPage from '../reportPage.jsx';
 
 describe('<ReportPage />', () => {
   test('Should render correctly', () => {

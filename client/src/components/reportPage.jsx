@@ -52,3 +52,8 @@ ReportPage.propTypes = {
   show: PropTypes.bool,
   handleClose: PropTypes.func,
 };
+
+ReportPage.defaultProps = {
+  show: false,
+  handleClose: {},
+};

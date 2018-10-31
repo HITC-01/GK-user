@@ -59,15 +59,16 @@ class Page extends React.Component {
 
 
   render() {
+    const { isFollowing, userData, songData } = this.state;
     return (
       <div className="up-app">
         <UserProfile
-          following={this.state.isFollowing} 
-          handleFollow={this.handleFollow} 
-          userData={this.state.userData}
+          following={isFollowing}
+          handleFollow={this.handleFollow}
+          userData={userData}
         />
         <TrackDescription
-          songData={this.state.songData}
+          songData={songData}
         />
       </div>
     );

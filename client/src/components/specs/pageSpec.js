@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Page from '../Page.jsx';
-import "isomorphic-fetch";
+import Page from '../page.jsx';
+import 'isomorphic-fetch';
 
 describe('<Page />', () => {
   test('Should render correctly', () => {

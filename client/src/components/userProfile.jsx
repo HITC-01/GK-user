@@ -22,9 +22,10 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    const { userData, following, handleFollow } = this.props;
+    const { userData, isFollowing, handleFollow } = this.props;
+    const { show } = this.state;
     const data = userData || {};
-    const followStatus = following ? 'following' : 'follow';
+    const followStatus = isFollowing ? 'following' : 'follow';
     const proBolt = data.pro === 'true' ? <i className="fas fa-bolt" /> : '';
     const username = data.userName && data.userName.length > 13 ? data.userName.slice(0, 10).concat('...') : data.userName;
     return (
@@ -49,16 +50,27 @@ class UserProfile extends React.Component {
           </span>
         </div>
         <br />
-        <button type="button" className={`up-button-${followStatus}`} tabIndex="0" title="Following" onClick={handleFollow}>
+        <button
+          type="button"
+          className={`up-button-${followStatus}`}
+          tabIndex="0"
+          title="Following"
+          onClick={handleFollow}
+        >
           { followStatus }
         </button>
         <br />
         <div id="up-report-sign">
           <i className="far fa-flag" />
-          <button type="button" onClick={this.showModal} className="up-report-button up-txt" onKeyDown={this.handleClick}>
+          <button
+            type="button"
+            onClick={this.showModal}
+            className="up-report-button up-txt"
+            onKeyDown={this.handleClick}
+          >
             Report
           </button>
-          <ReportPage show={this.state.show} handleClose={this.hideModal} />
+          <ReportPage show={show} handleClose={this.hideModal} />
         </div>
       </div>
     );
@@ -68,9 +80,12 @@ export default UserProfile;
 
 UserProfile.propTypes = {
   userData: PropTypes.instanceOf(Object),
+  isFollowing: PropTypes.string,
   handleFollow: PropTypes.func,
 };
 
 UserProfile.defaultProps = {
-  userData : {}
-}
+  userData: {},
+  isFollowing: 'false',
+  handleFollow: {},
+};
