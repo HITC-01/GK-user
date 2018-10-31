@@ -8,7 +8,6 @@ const ReportPage = ({ handleClose, show }) => {
       <div className="up-modal">
         <section className="up-modal-report">
           <h1> Report Track For </h1>
-          <br />
           <ul>
             <li>
               <a href="www.google.com"> Copyright infringement </a>

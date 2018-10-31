@@ -1,9 +1,10 @@
 import React from 'react';
 
-const HashTag = () => {
+const HashTag = ({ hash }) => {
   return (
     <div>
-      <span> HashTag </span>
+      <span className="up-hash"># {hash}  </span>
+      <p>  </p>
     </div>
   );
 };

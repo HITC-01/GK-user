@@ -22,6 +22,7 @@ CREATE TABLE songs (
   id int not null auto_increment,
   userId INT,
   description TEXT,
+  hashtags TEXT,
   PRIMARY KEY (id),
   FOREIGN KEY (userId) REFERENCES users(id)
 );
