@@ -57,8 +57,6 @@ UserProfile.propTypes = {
   handleFollow: PropTypes.func,
   handleModal: PropTypes.func,
 };
-<<<<<<< HEAD
-=======
 
 UserProfile.defaultProps = {
   userData: {},
@@ -66,4 +64,3 @@ UserProfile.defaultProps = {
   handleFollow: {},
   handleModal: {},
 };
->>>>>>> f4075b1b2ad1828b3a98af315dd9f101dad1cca7
