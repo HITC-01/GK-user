@@ -1,11 +1,21 @@
-.app {
-  font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif
+body {
+  font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  color: black;
 }
-/* modal features */
+
+li {
+  padding: 2px;
+  color: grey;
+}
+
+li:hover {
+  color: black;
+}
+
+/* modal features - Refer to ReportPage Component */
 .up-modalWrapper {
-  display: flex;
-  justify-content: center;
   position: fixed;
+  z-index: 100;
   height: 100%;
   width: 100%;
   top: 0;
@@ -14,11 +24,11 @@
 }
 
 .up-modal {
-  display: block;
   border-radius: 1%;
   position: absolute;
-  top: 20px;
-  width: 50%;
+  top: 25%;
+  left: 25%;
+  width: 38em;
   background-color: white;
 }
 
@@ -26,9 +36,9 @@
   display: none;
 }
 
-.up {
+/*user profile container - Refer to UserProfile Component */
+.up-container {
   padding: 10px;
-  border: 1px;
 }
 
 .up-td-hash {
@@ -37,7 +47,7 @@
 }
 
 .up-td-panel-show {
-  max-height: 80px;
+  max-height: 5em;
   width: 50em;
   position: relative;
   overflow: hidden;
@@ -45,12 +55,13 @@
 }
 
 .up-td-panel-hide {
-  max-height: 80px;
+  max-height: 5em;
   width: 50em;
   position: relative;
   overflow: visible;
   transition: max-height .5s ease;
 }
+
 
 .up-hash {
   position: relative;
@@ -76,18 +87,12 @@ a {
   color: #999;
 }
 
-.up-hide {
+.up-hide, .up-show {
   margin: 16px 0px 0px 6px;
   position: absolute;
+  color: grey;
   z-index: 100;
 }
-.up-show {
-  color: red;
-  margin: 16px 0px 0px 6px;
-  position: absolute;
-  z-index: 100;
-}
-
 
 
 .up-trackdescription {
@@ -142,9 +147,7 @@ a {
   border-radius: 20%;
   border: 1px solid #e5e5e5;
   color: #f50;
-  white-space: nowrap;
   text-align: center;
-  box-sizing: border-box;
   font-size: 11px;
   padding: 2px 9px 2px 8px;
   height: 22px;
@@ -154,11 +157,9 @@ a {
 .up-button-follow {
   background-color: #f50;
   border-radius: 20%;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #f50;
   color: white;
-  white-space: nowrap;
   text-align: center;
-  box-sizing: border-box;
   font-size: 11px;
   padding: 2px 9px 2px 8px;
   height: 22px;
@@ -188,11 +189,9 @@ a {
   text-transform: uppercase;
 }
 
-
-
 /* hover features */
 
-.up-txt:hover {
+.black:hover {
   color:black;
 }
 .up-button-following:hover {

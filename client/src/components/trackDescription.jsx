@@ -27,23 +27,22 @@ class TrackDescription extends React.Component {
     const { isToggleOn } = this.state;
     const showDescription = isToggleOn ? 'show' : 'hide'; 
     const hash = hashtags.length > 2 ?  <HashTag hash={hashtags} /> : '';
-
+    const clickDisplay = isToggleOn ? 'Show More v' : 'Show Less ^ ';
     
     return (
       <div className="up-td-wrapper">
-        <div className={`up-td-panel-${showDescription}`}>
+        <div className={`up-td-panel-${showDescription} `}>
           <p className="up-trackdescription">{message}</p>
           <div className="up-td-hash">
             {hash}
           </div>
           </div>
-
-          <div className={`up-fade-${showDescription}`}> </div>
+          <div className={`up-fade-${showDescription}`} />
         <br />
         <div className="up-outisde"> 
-        <button type="button" onClick={this.handleClick} className={`up-${showDescription}`}>
-          {showDescription}
-        </button>
+          <span onClick={this.handleClick} className={`up-${showDescription}`}>
+          {clickDisplay}
+        </span>
         </div>
       </div>
     );

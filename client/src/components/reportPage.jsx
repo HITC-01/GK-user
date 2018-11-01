@@ -2,37 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ReportPage = ({ handleClose, show }) => {
-  const showHideClassName = show ? '' : 'display-none';
+  const sectionStyle = { margin: '4px' };
+  const showHideClassName = show ? '' : 'up-display-none';
+  const violations = ['Copyright Infringement', 'Privacy Violation', 'Pornographic Content', 'Abuse', 'Hate Speech', ' Illegal Content', 'Other'];
+  const reportLinks = violations.map((violation, i) => {
+    return (
+      <li className="black" key={i}>
+        {violation}
+      </li>
+    );
+  });
+
   return (
-    <div className={`up-modalWrapper up-${showHideClassName}`}>
+    <div className={`up-modalWrapper ${showHideClassName}`}>
       <div className="up-modal">
-        <section className="up-modal-report">
+        <section style={sectionStyle}>
           <h1> Report Track For </h1>
           <ul>
-            <li>
-              <a href="www.google.com"> Copyright infringement </a>
-            </li>
-            <li>
-              <a href="www.google.com"> Privacy Violation </a>
-            </li>
-            <li>
-              <a href="www.google.com"> Pornographic Content </a>
-            </li>
-            <li>
-              <a href="www.google.com"> Abuse </a>
-            </li>
-            <li>
-              <a href="www.google.com"> Hate Speech </a>
-            </li>
-            <li>
-              <a href="www.google.com"> Illegal Content </a>
-            </li>
-            <li>
-              <a href="www.google.com"> Other </a>
-            </li>
+            {reportLinks}
           </ul>
+          <h3> Disclaimer: </h3>
+          <p>Reported tracks are reviewed by a specialist team who take action if the content violates our Guidelines or Terms. Repeat violation or serious breaches can result in the permanent deletion of accounts. </p>
+          <button onClick={handleClose} type="button"> Close Out </button>
         </section>
-        <button className="up-close" onClick={handleClose} type="button"> X </button>
       </div>
     </div>
   );
