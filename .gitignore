@@ -10,6 +10,7 @@ pids
 *.pid
 logs
 *.log
+*bundle.js
 
 # sql database fake data
 database/seeding/dataSeeded.sql

@@ -70,4 +70,3 @@ UserProfile.propTypes = {
   userData: PropTypes.instanceOf(Object).isRequired,
   handleFollow: PropTypes.func.isRequired,
 };
-
