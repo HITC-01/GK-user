@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import HashTag from './hashtag.jsx';
-// import { start } from 'repl';
 
 class TrackDescription extends React.Component {
   constructor(props) {
@@ -22,27 +21,26 @@ class TrackDescription extends React.Component {
 
   render() {
     const { songData } = this.props || {};
+    const { isToggleOn } = this.state;
     const hashtags = songData.hashtags || '';
     const message = songData.description || '';
-    const { isToggleOn } = this.state;
-    const showDescription = isToggleOn ? 'show' : 'hide'; 
-    const hash = hashtags.length > 2 ?  <HashTag hash={hashtags} /> : '';
+    const showDescription = isToggleOn ? 'show' : 'hide';
+    const hash = hashtags.length > 2 ? <HashTag hash={hashtags} /> : '';
     const clickDisplay = isToggleOn ? 'Show More v' : 'Show Less ^ ';
-    
     return (
-      <div className="up-td-wrapper">
-        <div className={`up-td-panel-${showDescription} `}>
-          <p className="up-trackdescription">{message}</p>
-          <div className="up-td-hash">
+      <div className="utd-wrapper">
+        <div className={`utd-panel utd-${showDescription} `}>
+          <p className="utd">{message}</p>
+          <div className="utd-hash">
             {hash}
           </div>
-          </div>
-          <div className={`up-fade-${showDescription}`} />
+        </div>
+        <div className={`up-fade-${showDescription}`} />
         <br />
-        <div className="up-outisde"> 
-          <span onClick={this.handleClick} className={`up-${showDescription}`}>
-          {clickDisplay}
-        </span>
+        <div className="utd-button-div">
+          <button type="button" className="utd-toggle" onClick={this.handleClick} onKeyDown={this.handleClick}>
+            {clickDisplay}
+          </button>
         </div>
       </div>
     );

@@ -3,21 +3,24 @@ import PropTypes from 'prop-types';
 
 const ReportPage = ({ handleClose, show }) => {
   const sectionStyle = { margin: '4px' };
-  const showHideClassName = show ? '' : 'up-display-none';
+  const hrStyle = { margin: '10px' };
+  const h1Style = { margin: '10px' };
+  const showHideClassName = show ? 'up-modalWrapper' : 'up-display-none';
   const violations = ['Copyright Infringement', 'Privacy Violation', 'Pornographic Content', 'Abuse', 'Hate Speech', ' Illegal Content', 'Other'];
-  const reportLinks = violations.map((violation, i) => {
+  const reportLinks = violations.map((violation) => {
     return (
-      <li className="black" key={i}>
+      <li className="black" key={violation}>
         {violation}
       </li>
     );
   });
 
   return (
-    <div className={`up-modalWrapper ${showHideClassName}`}>
+    <div className={`${showHideClassName}`}>
       <div className="up-modal">
         <section style={sectionStyle}>
-          <h1> Report Track For </h1>
+          <h1 style={h1Style}> Report Track For </h1>
+          <hr style={hrStyle} />
           <ul>
             {reportLinks}
           </ul>

@@ -8,10 +8,6 @@ li {
   color: grey;
 }
 
-li:hover {
-  color: black;
-}
-
 /* modal features - Refer to ReportPage Component */
 .up-modalWrapper {
   position: fixed;
@@ -41,27 +37,57 @@ li:hover {
   padding: 10px;
 }
 
-.up-td-hash {
+/*Track Description Starts*/
+.utd-hash {
   display: flex;
   flex-direction: row;
 }
 
-.up-td-panel-show {
-  max-height: 5em;
+.utd-panel {
   width: 50em;
+  max-height: 5em;
   position: relative;
+}
+
+.utd-show {
   overflow: hidden;
-  transition: max-height .5s ease;
 }
 
-.up-td-panel-hide {
-  max-height: 5em;
-  width: 50em;
-  position: relative;
+.utd-hide {
   overflow: visible;
-  transition: max-height .5s ease;
 }
 
+.utd-toggle {
+  border: none;
+  position: absolute;
+  color: grey;
+  z-index: 100;
+}
+
+.utd-button-div {
+  position: relative;
+}
+
+.utd {
+  margin: 10px;
+  font-size: 14px;
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  font-weight: 100;
+}
+
+.up-fade-show {
+  background: linear-gradient(transparent, white);
+  height: 100px;
+  margin-top: -100px;
+  position: relative;
+}
+
+.up-fade-hide {
+  height: 100px;
+  position: relative;
+}
+
+/*Track Description Ends*/
 
 .up-hash {
   position: relative;
@@ -82,37 +108,9 @@ li:hover {
   border-radius: 20px;
 }
 
-a {
-  text-decoration: none;
-  color: #999;
-}
-
-.up-hide, .up-show {
-  margin: 16px 0px 0px 6px;
-  position: absolute;
-  color: grey;
-  z-index: 100;
-}
 
 
-.up-trackdescription {
-  margin: 10px;
-  font-size: 14px;
-  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
-  font-weight: 100;
-}
 
-.up-fade-show {
-  background: linear-gradient(transparent, white);
-  height: 100px;
-  margin-top: -100px;
-  position: relative;
-}
-
-.up-fade-hide {
-  height: 100px;
-  position: relative;
-}
 
 
 .up-app {
@@ -142,11 +140,8 @@ a {
   display: inline-block;
 }
 
-.up-button-following {
-  background-color: white;
+.up-button {
   border-radius: 20%;
-  border: 1px solid #e5e5e5;
-  color: #f50;
   text-align: center;
   font-size: 11px;
   padding: 2px 9px 2px 8px;
@@ -154,16 +149,16 @@ a {
   line-height: 16px;
 }
 
-.up-button-follow {
+.up-follow {
   background-color: #f50;
-  border-radius: 20%;
   border: 1px solid #f50;
   color: white;
-  text-align: center;
-  font-size: 11px;
-  padding: 2px 9px 2px 8px;
-  height: 22px;
-  line-height: 16px;
+}
+
+.up-following {
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  color: #f50;
 }
 
 .up-bt-show-more {
@@ -189,11 +184,14 @@ a {
   text-transform: uppercase;
 }
 
-/* hover features */
 
+/* hover features */
+li:hover {
+  color: black;
+}
 .black:hover {
   color:black;
 }
-.up-button-following:hover {
+.up-button:hover {
   border-color: #f50
 }

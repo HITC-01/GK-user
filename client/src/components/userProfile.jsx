@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 const UserProfile = ({
-  userData, isFollowing, handleFollow, showModal,
+  userData, isFollowing, handleFollow, handleModal,
 }) => {
   const data = userData || {};
   const followStatus = isFollowing ? 'following' : 'follow';
@@ -28,7 +27,7 @@ const UserProfile = ({
       <br />
       <button
         type="button"
-        className={`up-button-${followStatus}`}
+        className={`up-button up-${followStatus}`}
         tabIndex="0"
         title={`${followStatus}`}
         onClick={handleFollow}
@@ -40,9 +39,9 @@ const UserProfile = ({
         <i className="far fa-flag" />
         <button
           type="button"
-          onClick={showModal}
+          onClick={handleModal}
           className="up-report-button black"
-          onKeyDown={showModal}
+          onKeyDown={handleModal}
         >
           Report
         </button>
@@ -56,12 +55,12 @@ UserProfile.propTypes = {
   userData: PropTypes.instanceOf(Object),
   isFollowing: PropTypes.bool,
   handleFollow: PropTypes.func,
-  showModal: PropTypes.func,
+  handleModal: PropTypes.func,
 };
 
 UserProfile.defaultProps = {
   userData: {},
   isFollowing: false,
   handleFollow: {},
-  showModal: {},
+  handleModal: {},
 };

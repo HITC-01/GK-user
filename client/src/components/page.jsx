@@ -16,8 +16,7 @@ class Page extends React.Component {
     this.getUserData = this.getUserData.bind(this);
     this.getSongData = this.getSongData.bind(this);
     this.handleFollow = this.handleFollow.bind(this);
-    this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
+    this.handleModal = this.handleModal.bind(this);
   }
 
   componentDidMount() {
@@ -35,45 +34,36 @@ class Page extends React.Component {
       });
   }
 
-  getSongData(id) {
-    const url = `/songs/${id}`;
+  getSongData(songId) {
+    const url = `/songs/${songId}`;
     return fetch(url, { method: 'GET' })
-      .then(songData => {return songData.json()})
+      .then((songData) => { return songData.json(); })
       .then((songDataArr) => {
         const songData = songDataArr[0];
         this.setState({ songData });
       });
   }
 
-  getUserData(id) {
-    const url = `/users/${id}`;
+  getUserData(userId) {
+    const url = `/users/${userId}`;
     return fetch(url, { method: 'GET' })
-      .then(profile => {return profile.json()})
+      .then((profile) => { return profile.json(); })
       .then((userDataArr) => {
         const userData = userDataArr[0];
-        let { isFollowing } = userData;
-        if (isFollowing === 'true') {
-          isFollowing = true;
-        } else {
-          isFollowing = false;
-        }
+        const { isFollowing } = Boolean.valueOf(userData.isFollowing);
         this.setState({ userData, isFollowing });
       });
   }
 
-  showModal() {
-    this.setState({ show: true });
-  }
-
-  hideModal() {
-    this.setState({ show: false });
+  handleModal() {
+    const { show } = this.state;
+    this.setState({ show: !show });
   }
 
   handleFollow() {
     const { isFollowing } = this.state;
     this.setState({ isFollowing: !isFollowing });
   }
-
 
   render() {
     const {
@@ -88,12 +78,12 @@ class Page extends React.Component {
           isFollowing={isFollowing}
           handleFollow={this.handleFollow}
           userData={userData}
-          showModal={this.showModal}
+          handleModal={this.handleModal}
         />
         <TrackDescription
           songData={songData}
         />
-        <ReportPage show={show} handleClose={this.hideModal} />
+        <ReportPage show={show} handleClose={this.handleModal} />
       </div>
     );
   }
