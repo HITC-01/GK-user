@@ -8,14 +8,19 @@ describe('<UserProfile />', () => {
   let props = {};
   beforeEach(() => {
     props = {
-      id: 2,
-      pro: 'true',
-      isFollowing: 'false',
-      followers: 69,
-      trackCount: 28,
-      userName: 'Trevor Ankunding IV',
-      profilePhoto: 'https://s3.amazonaws.com/uifaces/faces/twitter/jjshaw14/128.jpg',
-      location: 'Davismouth, Montserrat',
+      isFollowing: true,
+      handleFollow: () => {},
+      userData: {
+        id: 2,
+        pro: 'true',
+        isFollowing: 'false',
+        followers: 69,
+        trackCount: 28,
+        userName: 'Trevor Ankunding IV',
+        profilePhoto: 'https://s3.amazonaws.com/uifaces/faces/twitter/jjshaw14/128.jpg',
+        location: 'Davismouth, Montserrat',
+      },
+      handleModal: () => {},
     };
   });
 
