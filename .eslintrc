@@ -1,5 +1,20 @@
 {
   "extends": "airbnb",
   "parser": "babel-eslint",
-  "globals": { "fetch": false }
+  "globals": { "fetch": false },
+  "plugins": [
+    "jest"
+  ],
+  "env" : {
+    "es6" :true,
+    "browser":true,
+    "jest/globals":true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/extensions":0,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
+    "arrow-body-style": ["error", "always"]
+  }
 }
+ 

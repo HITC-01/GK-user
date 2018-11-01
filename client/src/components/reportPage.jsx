@@ -2,53 +2,43 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ReportPage = ({ handleClose, show }) => {
-  const showHideClassName = show ? '' : 'display-none';
+  const marginStyle = { margin: '10px' };
+  const showHideClassName = show ? 'up-modalWrapper' : 'up-display-none';
+  const violations = ['Copyright Infringement', 'Privacy Violation', 'Pornographic Content', 'Abuse', 'Hate Speech', ' Illegal Content', 'Other'];
+  const reportLinks = violations.map((violation) => {
+    return (
+      <li className="black" key={violation}>
+        {violation}
+      </li>
+    );
+  });
+
   return (
-    <div className={`up-modalWrapper up-${showHideClassName}`}>
+    <div className={`${showHideClassName}`}>
       <div className="up-modal">
-        <section className="up-modal-report">
-          <h1> Report Track For </h1>
-          <br />
+        <section style={{ margin: '4px' }}>
+          <h1 style={marginStyle}> Report Track For </h1>
+          <hr style={marginStyle} />
           <ul>
-            <li>
-              <a href="www.google.com"> Copyright infringement </a>
-            </li>
-            <br />
-            <li>
-              <a href="www.google.com"> Privacy Violation </a>
-            </li>
-            <br />
-            <li>
-              <a href="www.google.com"> Pornographic Content </a>
-            </li>
-            <br />
-            <li>
-              <a href="www.google.com"> Abuse </a>
-            </li>
-            <br />
-            <li>
-              <a href="www.google.com"> Hate Speech </a>
-            </li>
-            <br />
-            <li>
-              <a href="www.google.com"> Illegal Content </a>
-            </li>
-            <br />
-            <li>
-              <a href="www.google.com"> Other </a>
-            </li>
+            {reportLinks}
           </ul>
+          <h3> Disclaimer: </h3>
+          <p>Reported tracks are reviewed by a specialist team who take action if the content violates our Guidelines or Terms. Repeat violation or serious breaches can result in the permanent deletion of accounts. </p>
+          <button onClick={handleClose} type="button"> Close Out </button>
         </section>
-        <button className="up-close" onClick={handleClose} type="button"> X </button>
       </div>
     </div>
   );
 };
 
-
 export default ReportPage;
 
 ReportPage.propTypes = {
-  show: PropTypes.bool.isRequired,
-  handleClose: PropTypes.func.isRequired,
+  show: PropTypes.bool,
+  handleClose: PropTypes.func,
+};
+
+ReportPage.defaultProps = {
+  show: false,
+  handleClose: {},
 };

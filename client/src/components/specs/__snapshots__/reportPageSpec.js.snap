@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReportPage /> Should render correctly 1`] = `
+<div
+  className="up-display-none"
+>
+  <div
+    className="up-modal"
+  >
+    <section
+      style={
+        Object {
+          "margin": "4px",
+        }
+      }
+    >
+      <h1
+        style={
+          Object {
+            "margin": "10px",
+          }
+        }
+      >
+         Report Track For 
+      </h1>
+      <hr
+        style={
+          Object {
+            "margin": "10px",
+          }
+        }
+      />
+      <ul>
+        <li
+          className="black"
+        >
+          Copyright Infringement
+        </li>
+        <li
+          className="black"
+        >
+          Privacy Violation
+        </li>
+        <li
+          className="black"
+        >
+          Pornographic Content
+        </li>
+        <li
+          className="black"
+        >
+          Abuse
+        </li>
+        <li
+          className="black"
+        >
+          Hate Speech
+        </li>
+        <li
+          className="black"
+        >
+           Illegal Content
+        </li>
+        <li
+          className="black"
+        >
+          Other
+        </li>
+      </ul>
+      <h3>
+         Disclaimer: 
+      </h3>
+      <p>
+        Reported tracks are reviewed by a specialist team who take action if the content violates our Guidelines or Terms. Repeat violation or serious breaches can result in the permanent deletion of accounts. 
+      </p>
+      <button
+        onClick={Object {}}
+        type="button"
+      >
+         Close Out 
+      </button>
+    </section>
+  </div>
+</div>
+`;
