@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrackDescription /> Should render correctly 1`] = `
+<div
+  className="utd-wrapper"
+>
+  <div
+    className="utd-panel utd-show "
+  >
+    <p
+      className="utd"
+    >
+      
+    </p>
+    <div
+      className="utd-hash"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="up-fade-show"
+  />
+  <br />
+  <div
+    className="utd-button-div"
+  >
+    <button
+      className="utd-toggle"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      type="button"
+    >
+      Show More v
+    </button>
+  </div>
+</div>
+`;

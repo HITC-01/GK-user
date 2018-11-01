@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserProfile /> Should correctly render userdata 1`] = `
+<div
+  className="up-container"
+>
+  <img
+    alt="Loading"
+    className="up-photo"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/jjshaw14/128.jpg"
+  />
+  <br />
+  <span
+    className="up-username"
+    title="Visit Trevor Anku...'s profile"
+  >
+    Trevor Anku...
+    <i
+      className="fas fa-bolt"
+      style={
+        Object {
+          "color": "#f50",
+        }
+      }
+    />
+  </span>
+  <br />
+  <i
+    className="fas fa-users"
+  />
+  <span
+    className="up-followcount black"
+    title="69 followers"
+  >
+    69
+  </span>
+  <i
+    className="fas fa-headphones-alt"
+  />
+  <span
+    className="up-trackcount black"
+    title="28 tracks"
+  >
+    28
+  </span>
+  <br />
+  <button
+    className="up-button up-follow"
+    onClick={Object {}}
+    tabIndex="0"
+    title="follow"
+    type="button"
+  >
+    follow
+  </button>
+  <br />
+  <div
+    id="up-report-sign"
+  >
+    <i
+      className="far fa-flag"
+    />
+    <button
+      className="up-report-button black"
+      onClick={Object {}}
+      onKeyDown={Object {}}
+      type="button"
+    >
+      Report
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<UserProfile /> Should render correctly if no userData is passed 1`] = `
+<div
+  className="up-container"
+>
+  <img
+    alt="Loading"
+    className="up-photo"
+  />
+  <br />
+  <span
+    className="up-username"
+    title="Visit undefined's profile"
+  >
+    
+  </span>
+  <br />
+  <i
+    className="fas fa-users"
+  />
+  <span
+    className="up-followcount black"
+    title="undefined followers"
+  />
+  <i
+    className="fas fa-headphones-alt"
+  />
+  <span
+    className="up-trackcount black"
+    title="undefined tracks"
+  />
+  <br />
+  <button
+    className="up-button up-follow"
+    onClick={Object {}}
+    tabIndex="0"
+    title="follow"
+    type="button"
+  >
+    follow
+  </button>
+  <br />
+  <div
+    id="up-report-sign"
+  >
+    <i
+      className="far fa-flag"
+    />
+    <button
+      className="up-report-button black"
+      onClick={Object {}}
+      onKeyDown={Object {}}
+      type="button"
+    >
+      Report
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<UserProfile /> Should render following state 1`] = `
+<div
+  className="up-container"
+>
+  <img
+    alt="Loading"
+    className="up-photo"
+  />
+  <br />
+  <span
+    className="up-username"
+    title="Visit undefined's profile"
+  >
+    
+  </span>
+  <br />
+  <i
+    className="fas fa-users"
+  />
+  <span
+    className="up-followcount black"
+    title="undefined followers"
+  />
+  <i
+    className="fas fa-headphones-alt"
+  />
+  <span
+    className="up-trackcount black"
+    title="undefined tracks"
+  />
+  <br />
+  <button
+    className="up-button up-follow"
+    onClick={Object {}}
+    tabIndex="0"
+    title="follow"
+    type="button"
+  >
+    follow
+  </button>
+  <br />
+  <div
+    id="up-report-sign"
+  >
+    <i
+      className="far fa-flag"
+    />
+    <button
+      className="up-report-button black"
+      onClick={Object {}}
+      onKeyDown={Object {}}
+      type="button"
+    >
+      Report
+    </button>
+  </div>
+</div>
+`;

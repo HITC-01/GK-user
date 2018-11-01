@@ -22,7 +22,7 @@ app.get('/users/:user', (req, res) => {
     } else {
       res.send(JSON.stringify(data));
     }
-  })
+  });
 });
 
 app.get('/songs/:song', (req, res) => {
@@ -34,9 +34,8 @@ app.get('/songs/:song', (req, res) => {
     } else {
       res.send(JSON.stringify(data));
     }
-  })
+  });
 });
-
 
 app.listen(port, () => {
   console.log('Listening to port 3001!');
