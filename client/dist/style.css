@@ -9,6 +9,7 @@ li {
 }
 
 /* modal features - Refer to ReportPage Component */
+
 .up-modalWrapper {
   position: fixed;
   z-index: 100;
@@ -38,6 +39,11 @@ li {
 }
 
 /*Track Description Starts*/
+.utd-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .utd-hash {
   display: flex;
   flex-direction: row;
@@ -45,12 +51,13 @@ li {
 
 .utd-panel {
   width: 50em;
-  max-height: 5em;
   position: relative;
 }
 
+
 .utd-show {
   overflow: hidden;
+  max-height: 9em;
 }
 
 .utd-hide {
@@ -61,7 +68,6 @@ li {
   border: none;
   position: absolute;
   color: grey;
-  z-index: 100;
 }
 
 .utd-button-div {
@@ -83,7 +89,6 @@ li {
 }
 
 .up-fade-hide {
-  height: 100px;
   position: relative;
 }
 
