@@ -6,8 +6,7 @@ import { shallow } from '../../enzyme';
 
 describe('<UserProfile />', () => {
   let props = {};
-  
-  beforeEach(()=>{
+  beforeEach(() => {
     props = {
       id: 2,
       pro: 'true',
@@ -19,14 +18,13 @@ describe('<UserProfile />', () => {
       location: 'Davismouth, Montserrat',
     };
   });
-    
+
   test('Should render correctly if no userData is passed', () => {
     const component = renderer.create(<UserProfile />);
     const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
-
 
   test('Should correctly render userdata', () => {
     const component = renderer.create(<UserProfile userData={props} />);

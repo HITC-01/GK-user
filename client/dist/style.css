@@ -9,7 +9,6 @@ li {
 }
 
 /* modal features - Refer to ReportPage Component */
-
 .up-modalWrapper {
   position: fixed;
   z-index: 100;
@@ -53,7 +52,6 @@ li {
   width: 50em;
   position: relative;
 }
-
 
 .utd-show {
   overflow: hidden;
@@ -112,11 +110,6 @@ li {
   cursor: pointer;
   border-radius: 20px;
 }
-
-
-
-
-
 
 .up-app {
   display: flex;
@@ -188,7 +181,6 @@ li {
   word-break: normal;
   text-transform: uppercase;
 }
-
 
 /* hover features */
 li:hover {

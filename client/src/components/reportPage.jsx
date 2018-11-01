@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ReportPage = ({ handleClose, show }) => {
-  const sectionStyle = { margin: '4px' };
-  const hrStyle = { margin: '10px' };
-  const h1Style = { margin: '10px' };
+  const marginStyle = { margin: '10px' };
   const showHideClassName = show ? 'up-modalWrapper' : 'up-display-none';
   const violations = ['Copyright Infringement', 'Privacy Violation', 'Pornographic Content', 'Abuse', 'Hate Speech', ' Illegal Content', 'Other'];
   const reportLinks = violations.map((violation) => {
@@ -18,9 +16,9 @@ const ReportPage = ({ handleClose, show }) => {
   return (
     <div className={`${showHideClassName}`}>
       <div className="up-modal">
-        <section style={sectionStyle}>
-          <h1 style={h1Style}> Report Track For </h1>
-          <hr style={hrStyle} />
+        <section style={{ margin: '4px' }}>
+          <h1 style={marginStyle}> Report Track For </h1>
+          <hr style={marginStyle} />
           <ul>
             {reportLinks}
           </ul>

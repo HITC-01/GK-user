@@ -44,8 +44,8 @@ class TrackDescription extends React.Component {
         </div>
       </div>
     );
-  };
-}; 
+  }
+}
 
 export default TrackDescription;
 
