@@ -2,18 +2,37 @@
 
 exports[`<TrackDescription /> Should render correctly 1`] = `
 <div
-  className="up-td-div"
+  className="utd-wrapper"
 >
-  <p
-    className="up-trackdescription"
+  <div
+    className="utd-panel utd-show "
   >
-    
-  </p>
-  <button
-    className="up-bt-show-more"
-    type="button"
+    <p
+      className="utd"
+    >
+      
+    </p>
+    <div
+      className="utd-hash"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="up-fade-show"
+  />
+  <br />
+  <div
+    className="utd-button-div"
   >
-     Show more 
-  </button>
+    <button
+      className="utd-toggle"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      type="button"
+    >
+      Show More v
+    </button>
+  </div>
 </div>
 `;

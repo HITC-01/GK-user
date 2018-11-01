@@ -2,82 +2,84 @@
 
 exports[`<ReportPage /> Should render correctly 1`] = `
 <div
-  className="up-modalWrapper up-display-none"
+  className="up-display-none"
 >
   <div
     className="up-modal"
   >
     <section
-      className="up-modal-report"
+      style={
+        Object {
+          "margin": "4px",
+        }
+      }
     >
-      <h1>
+      <h1
+        style={
+          Object {
+            "margin": "10px",
+          }
+        }
+      >
          Report Track For 
       </h1>
-      <br />
+      <hr
+        style={
+          Object {
+            "margin": "10px",
+          }
+        }
+      />
       <ul>
-        <li>
-          <a
-            href="www.google.com"
-          >
-             Copyright infringement 
-          </a>
+        <li
+          className="black"
+        >
+          Copyright Infringement
         </li>
-        <br />
-        <li>
-          <a
-            href="www.google.com"
-          >
-             Privacy Violation 
-          </a>
+        <li
+          className="black"
+        >
+          Privacy Violation
         </li>
-        <br />
-        <li>
-          <a
-            href="www.google.com"
-          >
-             Pornographic Content 
-          </a>
+        <li
+          className="black"
+        >
+          Pornographic Content
         </li>
-        <br />
-        <li>
-          <a
-            href="www.google.com"
-          >
-             Abuse 
-          </a>
+        <li
+          className="black"
+        >
+          Abuse
         </li>
-        <br />
-        <li>
-          <a
-            href="www.google.com"
-          >
-             Hate Speech 
-          </a>
+        <li
+          className="black"
+        >
+          Hate Speech
         </li>
-        <br />
-        <li>
-          <a
-            href="www.google.com"
-          >
-             Illegal Content 
-          </a>
+        <li
+          className="black"
+        >
+           Illegal Content
         </li>
-        <br />
-        <li>
-          <a
-            href="www.google.com"
-          >
-             Other 
-          </a>
+        <li
+          className="black"
+        >
+          Other
         </li>
       </ul>
+      <h3>
+         Disclaimer: 
+      </h3>
+      <p>
+        Reported tracks are reviewed by a specialist team who take action if the content violates our Guidelines or Terms. Repeat violation or serious breaches can result in the permanent deletion of accounts. 
+      </p>
+      <button
+        onClick={Object {}}
+        type="button"
+      >
+         Close Out 
+      </button>
     </section>
-    <button
-      className="up-close"
-      type="button"
-    >
-       X 
-    </button>
   </div>
 </div>
 `;

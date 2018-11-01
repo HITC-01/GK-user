@@ -5,7 +5,7 @@ exports[`<Page /> Should render correctly 1`] = `
   className="up-app"
 >
   <div
-    className="up"
+    className="up-container"
   >
     <img
       alt="Loading"
@@ -14,35 +14,31 @@ exports[`<Page /> Should render correctly 1`] = `
     <br />
     <span
       className="up-username"
-    />
-    <span
-      className="up-bolt"
+      title="Visit undefined's profile"
     >
       
     </span>
     <br />
-    <div
-      className="up-count"
-    >
-      <i
-        className="fas fa-users"
-      />
-      <span
-        className="up-followcount up-txt"
-      />
-      <i
-        className="fas fa-headphones-alt"
-      />
-      <span
-        className="up-trackcount up-txt"
-      />
-    </div>
+    <i
+      className="fas fa-users"
+    />
+    <span
+      className="up-followcount black"
+      title="undefined followers"
+    />
+    <i
+      className="fas fa-headphones-alt"
+    />
+    <span
+      className="up-trackcount black"
+      title="undefined tracks"
+    />
     <br />
     <button
-      className="up-button-following"
+      className="up-button up-following"
       onClick={[Function]}
       tabIndex="0"
-      title="Following"
+      title="following"
       type="button"
     >
       following
@@ -55,108 +51,129 @@ exports[`<Page /> Should render correctly 1`] = `
         className="far fa-flag"
       />
       <button
-        className="up-report-button up-txt"
+        className="up-report-button black"
         onClick={[Function]}
+        onKeyDown={[Function]}
         type="button"
       >
         Report
       </button>
-      <div
-        className="up-modalWrapper up-display-none"
-      >
-        <div
-          className="up-modal"
-        >
-          <section
-            className="up-modal-report"
-          >
-            <h1>
-               Report Track For 
-            </h1>
-            <br />
-            <ul>
-              <li>
-                <a
-                  href="www.google.com"
-                >
-                   Copyright infringement 
-                </a>
-              </li>
-              <br />
-              <li>
-                <a
-                  href="www.google.com"
-                >
-                   Privacy Violation 
-                </a>
-              </li>
-              <br />
-              <li>
-                <a
-                  href="www.google.com"
-                >
-                   Pornographic Content 
-                </a>
-              </li>
-              <br />
-              <li>
-                <a
-                  href="www.google.com"
-                >
-                   Abuse 
-                </a>
-              </li>
-              <br />
-              <li>
-                <a
-                  href="www.google.com"
-                >
-                   Hate Speech 
-                </a>
-              </li>
-              <br />
-              <li>
-                <a
-                  href="www.google.com"
-                >
-                   Illegal Content 
-                </a>
-              </li>
-              <br />
-              <li>
-                <a
-                  href="www.google.com"
-                >
-                   Other 
-                </a>
-              </li>
-            </ul>
-          </section>
-          <button
-            className="up-close"
-            onClick={[Function]}
-            type="button"
-          >
-             X 
-          </button>
-        </div>
-      </div>
     </div>
   </div>
   <div
-    className="up-td-div"
+    className="utd-wrapper"
   >
-    <p
-      className="up-trackdescription"
+    <div
+      className="utd-panel utd-show "
     >
-      
-    </p>
-    <button
-      className="up-bt-show-more"
-      type="button"
+      <p
+        className="utd"
+      >
+        
+      </p>
+      <div
+        className="utd-hash"
+      >
+        
+      </div>
+    </div>
+    <div
+      className="up-fade-show"
+    />
+    <br />
+    <div
+      className="utd-button-div"
     >
-       Show more 
-    </button>
+      <button
+        className="utd-toggle"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        type="button"
+      >
+        Show More v
+      </button>
+    </div>
+  </div>
+  <div
+    className="up-display-none"
+  >
+    <div
+      className="up-modal"
+    >
+      <section
+        style={
+          Object {
+            "margin": "4px",
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "margin": "10px",
+            }
+          }
+        >
+           Report Track For 
+        </h1>
+        <hr
+          style={
+            Object {
+              "margin": "10px",
+            }
+          }
+        />
+        <ul>
+          <li
+            className="black"
+          >
+            Copyright Infringement
+          </li>
+          <li
+            className="black"
+          >
+            Privacy Violation
+          </li>
+          <li
+            className="black"
+          >
+            Pornographic Content
+          </li>
+          <li
+            className="black"
+          >
+            Abuse
+          </li>
+          <li
+            className="black"
+          >
+            Hate Speech
+          </li>
+          <li
+            className="black"
+          >
+             Illegal Content
+          </li>
+          <li
+            className="black"
+          >
+            Other
+          </li>
+        </ul>
+        <h3>
+           Disclaimer: 
+        </h3>
+        <p>
+          Reported tracks are reviewed by a specialist team who take action if the content violates our Guidelines or Terms. Repeat violation or serious breaches can result in the permanent deletion of accounts. 
+        </p>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+           Close Out 
+        </button>
+      </section>
+    </div>
   </div>
 </div>
 `;

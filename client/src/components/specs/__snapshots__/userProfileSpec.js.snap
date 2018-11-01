@@ -2,7 +2,7 @@
 
 exports[`<UserProfile /> Should correctly render userdata 1`] = `
 <div
-  className="up"
+  className="up-container"
 >
   <img
     alt="Loading"
@@ -12,42 +12,43 @@ exports[`<UserProfile /> Should correctly render userdata 1`] = `
   <br />
   <span
     className="up-username"
+    title="Visit Trevor Anku...'s profile"
   >
-    Trevor Ank...
-  </span>
-  <span
-    className="up-bolt"
-  >
+    Trevor Anku...
     <i
       className="fas fa-bolt"
+      style={
+        Object {
+          "color": "#f50",
+        }
+      }
     />
   </span>
   <br />
-  <div
-    className="up-count"
+  <i
+    className="fas fa-users"
+  />
+  <span
+    className="up-followcount black"
+    title="69 followers"
   >
-    <i
-      className="fas fa-users"
-    />
-    <span
-      className="up-followcount up-txt"
-    >
-      69
-    </span>
-    <i
-      className="fas fa-headphones-alt"
-    />
-    <span
-      className="up-trackcount up-txt"
-    >
-      28
-    </span>
-  </div>
+    69
+  </span>
+  <i
+    className="fas fa-headphones-alt"
+  />
+  <span
+    className="up-trackcount black"
+    title="28 tracks"
+  >
+    28
+  </span>
   <br />
   <button
-    className="up-button-follow"
+    className="up-button up-follow"
+    onClick={Object {}}
     tabIndex="0"
-    title="Following"
+    title="follow"
     type="button"
   >
     follow
@@ -60,99 +61,20 @@ exports[`<UserProfile /> Should correctly render userdata 1`] = `
       className="far fa-flag"
     />
     <button
-      className="up-report-button up-txt"
-      onClick={[Function]}
+      className="up-report-button black"
+      onClick={Object {}}
+      onKeyDown={Object {}}
       type="button"
     >
       Report
     </button>
-    <div
-      className="up-modalWrapper up-display-none"
-    >
-      <div
-        className="up-modal"
-      >
-        <section
-          className="up-modal-report"
-        >
-          <h1>
-             Report Track For 
-          </h1>
-          <br />
-          <ul>
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Copyright infringement 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Privacy Violation 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Pornographic Content 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Abuse 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Hate Speech 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Illegal Content 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Other 
-              </a>
-            </li>
-          </ul>
-        </section>
-        <button
-          className="up-close"
-          onClick={[Function]}
-          type="button"
-        >
-           X 
-        </button>
-      </div>
-    </div>
   </div>
 </div>
 `;
 
 exports[`<UserProfile /> Should render correctly if no userData is passed 1`] = `
 <div
-  className="up"
+  className="up-container"
 >
   <img
     alt="Loading"
@@ -161,34 +83,31 @@ exports[`<UserProfile /> Should render correctly if no userData is passed 1`] = 
   <br />
   <span
     className="up-username"
-  />
-  <span
-    className="up-bolt"
+    title="Visit undefined's profile"
   >
     
   </span>
   <br />
-  <div
-    className="up-count"
-  >
-    <i
-      className="fas fa-users"
-    />
-    <span
-      className="up-followcount up-txt"
-    />
-    <i
-      className="fas fa-headphones-alt"
-    />
-    <span
-      className="up-trackcount up-txt"
-    />
-  </div>
+  <i
+    className="fas fa-users"
+  />
+  <span
+    className="up-followcount black"
+    title="undefined followers"
+  />
+  <i
+    className="fas fa-headphones-alt"
+  />
+  <span
+    className="up-trackcount black"
+    title="undefined tracks"
+  />
   <br />
   <button
-    className="up-button-follow"
+    className="up-button up-follow"
+    onClick={Object {}}
     tabIndex="0"
-    title="Following"
+    title="follow"
     type="button"
   >
     follow
@@ -201,99 +120,20 @@ exports[`<UserProfile /> Should render correctly if no userData is passed 1`] = 
       className="far fa-flag"
     />
     <button
-      className="up-report-button up-txt"
-      onClick={[Function]}
+      className="up-report-button black"
+      onClick={Object {}}
+      onKeyDown={Object {}}
       type="button"
     >
       Report
     </button>
-    <div
-      className="up-modalWrapper up-display-none"
-    >
-      <div
-        className="up-modal"
-      >
-        <section
-          className="up-modal-report"
-        >
-          <h1>
-             Report Track For 
-          </h1>
-          <br />
-          <ul>
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Copyright infringement 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Privacy Violation 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Pornographic Content 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Abuse 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Hate Speech 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Illegal Content 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Other 
-              </a>
-            </li>
-          </ul>
-        </section>
-        <button
-          className="up-close"
-          onClick={[Function]}
-          type="button"
-        >
-           X 
-        </button>
-      </div>
-    </div>
   </div>
 </div>
 `;
 
 exports[`<UserProfile /> Should render following state 1`] = `
 <div
-  className="up"
+  className="up-container"
 >
   <img
     alt="Loading"
@@ -302,34 +142,31 @@ exports[`<UserProfile /> Should render following state 1`] = `
   <br />
   <span
     className="up-username"
-  />
-  <span
-    className="up-bolt"
+    title="Visit undefined's profile"
   >
     
   </span>
   <br />
-  <div
-    className="up-count"
-  >
-    <i
-      className="fas fa-users"
-    />
-    <span
-      className="up-followcount up-txt"
-    />
-    <i
-      className="fas fa-headphones-alt"
-    />
-    <span
-      className="up-trackcount up-txt"
-    />
-  </div>
+  <i
+    className="fas fa-users"
+  />
+  <span
+    className="up-followcount black"
+    title="undefined followers"
+  />
+  <i
+    className="fas fa-headphones-alt"
+  />
+  <span
+    className="up-trackcount black"
+    title="undefined tracks"
+  />
   <br />
   <button
-    className="up-button-follow"
+    className="up-button up-follow"
+    onClick={Object {}}
     tabIndex="0"
-    title="Following"
+    title="follow"
     type="button"
   >
     follow
@@ -342,92 +179,13 @@ exports[`<UserProfile /> Should render following state 1`] = `
       className="far fa-flag"
     />
     <button
-      className="up-report-button up-txt"
-      onClick={[Function]}
+      className="up-report-button black"
+      onClick={Object {}}
+      onKeyDown={Object {}}
       type="button"
     >
       Report
     </button>
-    <div
-      className="up-modalWrapper up-display-none"
-    >
-      <div
-        className="up-modal"
-      >
-        <section
-          className="up-modal-report"
-        >
-          <h1>
-             Report Track For 
-          </h1>
-          <br />
-          <ul>
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Copyright infringement 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Privacy Violation 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Pornographic Content 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Abuse 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Hate Speech 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Illegal Content 
-              </a>
-            </li>
-            <br />
-            <li>
-              <a
-                href="www.google.com"
-              >
-                 Other 
-              </a>
-            </li>
-          </ul>
-        </section>
-        <button
-          className="up-close"
-          onClick={[Function]}
-          type="button"
-        >
-           X 
-        </button>
-      </div>
-    </div>
   </div>
 </div>
 `;
