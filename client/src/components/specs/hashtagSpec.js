@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import HashTag from '../hashtag.jsx';
-import { shallow } from '../../enzyme';
+import { shallow, render } from '../../enzyme';
+
 
 describe('<HashTag />', () => {
   test('Should render correctly', () => {
@@ -12,9 +13,14 @@ describe('<HashTag />', () => {
   });
 
   test('render correct component prop type', () => {
-    // const props = { hash: 'testing' };
-    const component = shallow(<HashTag hash={'testing'} />);
+    const component = shallow(<HashTag hash="testing" />);
 
     expect(component.find('.up-hash').exists()).toBe(true);
+  });
+
+  test('Should render matching element', () => {
+    const component = shallow(<HashTag hash="hashing" />);
+
+    expect(component.containsMatchingElement(<div><span className="up-hash">#hashing</span></div>)).toBeTruthy();
   });
 });
