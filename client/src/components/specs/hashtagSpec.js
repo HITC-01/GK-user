@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import HashTag from '../hashtag.jsx';
-import { shallow, render } from '../../enzyme';
+import { shallow } from '../../enzyme';
 
 
 describe('<HashTag />', () => {
@@ -18,7 +18,7 @@ describe('<HashTag />', () => {
     expect(component.find('.up-hash').exists()).toBe(true);
   });
 
-  test('Should render matching element', () => {
+  test('Should contain div and span tag elements', () => {
     const component = shallow(<HashTag hash="hashing" />);
 
     expect(component.containsMatchingElement(<div><span className="up-hash">#hashing</span></div>)).toBeTruthy();
