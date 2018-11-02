@@ -61,6 +61,6 @@ UserProfile.propTypes = {
 UserProfile.defaultProps = {
   userData: {},
   isFollowing: false,
-  handleFollow: {},
-  handleModal: {},
+  handleFollow: () => {},
+  handleModal: () => {},
 };

@@ -10,7 +10,7 @@ describe('<UserProfile />', () => {
   beforeEach(() => {
     props = {
       isFollowing: true,
-      handleFollow: jest.fn(),
+      handleFollow: jest.fn(() => 'followButton'),
       userData: {
         id: 2,
         pro: 'true',
@@ -21,7 +21,7 @@ describe('<UserProfile />', () => {
         profilePhoto: 'https://s3.amazonaws.com/uifaces/faces/twitter/jjshaw14/128.jpg',
         location: 'Davismouth, Montserrat',
       },
-      handleModal: jest.fn(() => 'followButton'),
+      handleModal: jest.fn(() => 'handleModal'),
     };
     wrapper = shallow(<UserProfile {...props} />)
   });
@@ -34,6 +34,17 @@ describe('<UserProfile />', () => {
   });
 
   test('Should render two buttons', () => {
-    expect(wrapper.find('button')).toHaveLength(2)
+    expect(wrapper.find('button')).toHaveLength(2);
+  });
+
+  test('Should render appropriate text based on props', () => {
+    const handleButton = wrapper.find('button').first();
+    expect(handleButton.prop('children').toLowerCase()).toEqual('following');
+    handleButton.simulate('click');
+    expect(props.handleFollow).toHaveBeenCalled();
+
+    wrapper.setProps({ isFollowing: false });
+    const handleButton2 = wrapper.find('button').first();
+    expect(handleButton2.prop('children').toLowerCase()).toEqual('follow');
   });
 });

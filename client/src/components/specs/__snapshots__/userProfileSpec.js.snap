@@ -1,64 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<UserProfile /> Should correctly render userdata 1`] = `
-<div
-  className="up-container"
->
-  <img
-    alt="Loading"
-    className="up-photo"
-  />
-  <br />
-  <span
-    className="up-username"
-    title="Visit undefined's profile"
-  >
-    
-  </span>
-  <br />
-  <i
-    className="fas fa-users"
-  />
-  <span
-    className="up-followcount black"
-    title="undefined followers"
-  />
-  <i
-    className="fas fa-headphones-alt"
-  />
-  <span
-    className="up-trackcount black"
-    title="undefined tracks"
-  />
-  <br />
-  <button
-    className="up-button up-follow"
-    onClick={Object {}}
-    tabIndex="0"
-    title="follow"
-    type="button"
-  >
-    follow
-  </button>
-  <br />
-  <div
-    id="up-report-sign"
-  >
-    <i
-      className="far fa-flag"
-    />
-    <button
-      className="up-report-button black"
-      onClick={Object {}}
-      onKeyDown={Object {}}
-      type="button"
-    >
-      Report
-    </button>
-  </div>
-</div>
-`;
-
 exports[`<UserProfile /> Should render correctly if no userData is passed 1`] = `
 <div
   className="up-container"
@@ -92,7 +33,7 @@ exports[`<UserProfile /> Should render correctly if no userData is passed 1`] = 
   <br />
   <button
     className="up-button up-follow"
-    onClick={Object {}}
+    onClick={[Function]}
     tabIndex="0"
     title="follow"
     type="button"
@@ -108,67 +49,8 @@ exports[`<UserProfile /> Should render correctly if no userData is passed 1`] = 
     />
     <button
       className="up-report-button black"
-      onClick={Object {}}
-      onKeyDown={Object {}}
-      type="button"
-    >
-      Report
-    </button>
-  </div>
-</div>
-`;
-
-exports[`<UserProfile /> Should render following state 1`] = `
-<div
-  className="up-container"
->
-  <img
-    alt="Loading"
-    className="up-photo"
-  />
-  <br />
-  <span
-    className="up-username"
-    title="Visit undefined's profile"
-  >
-    
-  </span>
-  <br />
-  <i
-    className="fas fa-users"
-  />
-  <span
-    className="up-followcount black"
-    title="undefined followers"
-  />
-  <i
-    className="fas fa-headphones-alt"
-  />
-  <span
-    className="up-trackcount black"
-    title="undefined tracks"
-  />
-  <br />
-  <button
-    className="up-button up-follow"
-    onClick={Object {}}
-    tabIndex="0"
-    title="follow"
-    type="button"
-  >
-    follow
-  </button>
-  <br />
-  <div
-    id="up-report-sign"
-  >
-    <i
-      className="far fa-flag"
-    />
-    <button
-      className="up-report-button black"
-      onClick={Object {}}
-      onKeyDown={Object {}}
+      onClick={[Function]}
+      onKeyDown={[Function]}
       type="button"
     >
       Report
