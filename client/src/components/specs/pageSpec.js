@@ -19,4 +19,12 @@ describe('<Page />', () => {
     expect(wrapper.instance().state.isFollowing).toBe(true);
     expect(wrapper.instance().state.hello).toBe(undefined);
   });
+
+  test('Renders correct state based on passed in values', () => {
+    const wrapper = shallow(<Page show={false} isFollowing={true} hello={false}/>);
+
+    expect(wrapper.instance().state.show).toBe(false);
+    expect(wrapper.instance().state.isFollowing).toBe(true);
+    expect(wrapper.instance().state.hello).toBe(undefined);
+  });
 });

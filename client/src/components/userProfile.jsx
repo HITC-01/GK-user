@@ -7,6 +7,22 @@ const UserProfile = ({
   const data = userData || {};
   const followStatus = isFollowing ? 'following' : 'follow';
   const username = data.userName && data.userName.length > 13 ? data.userName.slice(0, 11).concat('...') : data.userName;
+  const SI_SYMBOL = [' ', 'k', 'M', 'G', 'T', 'P', 'E'];
+
+  const abbreviateNumbers = (number) => {
+    const tier = Math.log10(number) / 3 | 0;
+    if (tier == 0) return number;
+
+    const suffix = SI_SYMBOL[tier];
+    const scale = Math.pow(10, tier * 3);
+    const scaled = number / scale;
+
+    return scaled.toFixed(1) + suffix;
+  };
+
+  const followCount = abbreviateNumbers(data.followers);
+  const trackCount = abbreviateNumbers(data.trackCount);
+
   return (
     <div className="up-container">
       <img className="up-photo" src={data.profilePhoto} alt="Loading" />
@@ -18,11 +34,11 @@ const UserProfile = ({
       <br />
       <i className="fas fa-users" />
       <span title={`${data.followers} followers`} className="up-followcount black">
-        {data.followers}
+        {followCount}
       </span>
       <i className="fas fa-headphones-alt" />
       <span title={`${data.trackCount} tracks`} className="up-trackcount black">
-        {data.trackCount}
+        {trackCount}
       </span>
       <br />
       <button
