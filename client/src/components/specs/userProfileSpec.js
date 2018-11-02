@@ -6,10 +6,11 @@ import { shallow } from '../../enzyme';
 
 describe('<UserProfile />', () => {
   let props = {};
+  let wrapper = {};
   beforeEach(() => {
     props = {
       isFollowing: true,
-      handleFollow: () => {},
+      handleFollow: jest.fn(),
       userData: {
         id: 2,
         pro: 'true',
@@ -20,8 +21,9 @@ describe('<UserProfile />', () => {
         profilePhoto: 'https://s3.amazonaws.com/uifaces/faces/twitter/jjshaw14/128.jpg',
         location: 'Davismouth, Montserrat',
       },
-      handleModal: () => {},
+      handleModal: jest.fn(() => 'followButton'),
     };
+    wrapper = shallow(<UserProfile {...props} />)
   });
 
   test('Should render correctly if no userData is passed', () => {
@@ -31,23 +33,7 @@ describe('<UserProfile />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('Should correctly render userdata', () => {
-    const component = renderer.create(<UserProfile userData={props} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
-  test('Should render following state', () => {
-    const component = renderer.create(<UserProfile following={false} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
-  test('Should work with props', () => {
-    const component = shallow(<UserProfile {...props} />);
-    const propsOut = Array.from(Object.keys(component.props()));
-    expect(propsOut.length).toBe(2);
+  test('Should render two buttons', () => {
+    expect(wrapper.find('button')).toHaveLength(2)
   });
 });
