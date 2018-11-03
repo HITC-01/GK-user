@@ -13,21 +13,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 
-app.get('/users/:user', (req, res) => {
-  const userId = req.params.user;
-  const queryString = `SELECT * FROM users where id = ${userId}`;
-  db.query(queryString, (err, data) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.send(JSON.stringify(data));
-    }
-  });
-});
-
 app.get('/songs/:song', (req, res) => {
   const songId = req.params.song;
-  const queryString = `SELECT * FROM songs where id = ${songId}`;
+  const select = `
+  songs.description,
+  songs.hashtags,
+  users.pro,
+  users.isFollowing,
+  users.followers,
+  users.trackCount,
+  users.userName,
+  users.profilePhoto,
+  users.location
+  `;
+  const queryString = `SELECT ${select} FROM songs INNER JOIN users ON songs.id = ${songId} AND songs.userId=users.id`;
   db.query(queryString, (err, data) => {
     if (err) {
       console.log(err);
