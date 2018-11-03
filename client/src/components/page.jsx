@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import TrackDescription from './trackDescription.jsx';
 import UserProfile from './userProfile.jsx';
@@ -7,6 +8,7 @@ import ReportPage from './reportPage.jsx';
 class Page extends React.Component {
   constructor(props) {
     super(props);
+    this.url = props.url;
     this.state = {
       data: {},
       isFollowing: true,
@@ -26,7 +28,7 @@ class Page extends React.Component {
   }
 
   getData(songId) {
-    const url = `/songs/${songId}`;
+    const url = `${this.url}/songs/${songId}`;
     return fetch(url, { method: 'GET' })
       .then((resData) => { return resData.json(); })
       .then((dataArray) => {
@@ -69,4 +71,13 @@ class Page extends React.Component {
   }
 }
 
+Page.propTypes = {
+  url: PropTypes.string,
+};
+
+Page.defaultProps = {
+  url: '',
+};
+
 export default Page;
+
