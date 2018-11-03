@@ -5,6 +5,7 @@
 npm
 npm-debug.log
 node_modules/
+client/src/components/specs
 
 pids
 *.pid
@@ -26,4 +27,4 @@ coverage
 
 # Compiled Dirs (http://nodejs.org/api/addons.html)
 *bundle.js
-client/src/components/specs
+*Spec.js
