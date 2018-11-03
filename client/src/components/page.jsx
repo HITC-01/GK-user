@@ -27,7 +27,7 @@ class Page extends React.Component {
         const { userId } = songData;
         this.getUserData(userId);
       }).then(() => {
-        console.log('items included');
+        console.log('success!');
       })
       .catch(() => {
         console.log('error!');
