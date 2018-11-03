@@ -37,7 +37,6 @@ exports[`<Page /> Should render correctly 1`] = `
     <button
       className="up-button up-following"
       onClick={[Function]}
-      tabIndex="0"
       title="following"
       type="button"
     >
@@ -53,7 +52,6 @@ exports[`<Page /> Should render correctly 1`] = `
       <button
         className="up-report-button black"
         onClick={[Function]}
-        onKeyDown={[Function]}
         type="button"
       >
         Report
@@ -87,10 +85,9 @@ exports[`<Page /> Should render correctly 1`] = `
       <button
         className="utd-toggle"
         onClick={[Function]}
-        onKeyDown={[Function]}
         type="button"
       >
-        Show More v
+        --- Show More v ---
       </button>
     </div>
   </div>

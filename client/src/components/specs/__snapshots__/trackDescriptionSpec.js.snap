@@ -28,10 +28,9 @@ exports[`<TrackDescription /> Should render correctly 1`] = `
     <button
       className="utd-toggle"
       onClick={[Function]}
-      onKeyDown={[Function]}
       type="button"
     >
-      Show More v
+      --- Show More v ---
     </button>
   </div>
 </div>

@@ -1,3 +1,97 @@
+header {
+  width: 100%;
+  font: 100 14px/1.5 "Interstate","Lucida Grande",Arial,sans-serif;
+  background: #333;
+  display: flex;
+  flex-direction: row;
+  height: 46px;
+  transition: height .2s ease-in-out;
+}
+
+.bar-left {
+  display: flex;
+  flex-direction: row;
+}
+.fa-soundcloud {
+  font-size: 47px;
+  color: white;
+  background: #f50;
+}
+
+.bl {
+  padding: 12px 0;  
+  width: 104px;
+  height: 46px;
+  color:white;
+  border-right: 1px solid #111;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.bar-center {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 50%;
+  height: 46px;
+  color:white;
+  text-align: center;
+}
+
+.bc-search {
+  color: #666;
+  width: 95%;
+  outline: 0;
+  border: 0;
+  background: #e5e5e5;
+  text-align: center;
+  position: relative;
+}
+
+.bc-search2 {
+  padding:8px;
+  display:block;
+  background: #e5e5e5;
+  border:none;
+  width:100%;
+  border-radius:8px
+}
+
+.fa-search {
+  font-size: 31px;
+  margin: 2px;
+  border: 1px;
+  border-radius: 20%;
+  color: black;
+  background: #e5e5e5;
+  padding: 7px;
+  position: relative;
+}
+
+.bar-right {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 50%;
+  height: 46px;
+  color:white;
+  text-align: center;
+}
+
+.fa-user-circle {
+  font-size: 31px;
+  margin: 2px;
+  border: 1px;
+  border-radius: 20%;
+  color: black;
+  background: #e5e5e5;
+  padding: 7px;
+  position: relative;
+}
+
+
+/*User Profile & Track Description Component*/
+
 body {
   font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
   color: black;

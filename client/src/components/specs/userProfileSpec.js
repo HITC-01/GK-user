@@ -6,17 +6,24 @@ import { shallow } from '../../enzyme';
 
 describe('<UserProfile />', () => {
   let props = {};
+  let wrapper = {};
   beforeEach(() => {
     props = {
-      id: 2,
-      pro: 'true',
-      isFollowing: 'false',
-      followers: 69,
-      trackCount: 28,
-      userName: 'Trevor Ankunding IV',
-      profilePhoto: 'https://s3.amazonaws.com/uifaces/faces/twitter/jjshaw14/128.jpg',
-      location: 'Davismouth, Montserrat',
+      isFollowing: true,
+      handleFollow: jest.fn(() => 'followButton'),
+      userData: {
+        id: 2,
+        pro: 'true',
+        isFollowing: 'false',
+        followers: 69,
+        trackCount: 28,
+        userName: 'Trevor Ankunding IV',
+        profilePhoto: 'https://s3.amazonaws.com/uifaces/faces/twitter/jjshaw14/128.jpg',
+        location: 'Davismouth, Montserrat',
+      },
+      handleModal: jest.fn(() => 'handleModal'),
     };
+    wrapper = shallow(<UserProfile {...props} />)
   });
 
   test('Should render correctly if no userData is passed', () => {
@@ -26,23 +33,18 @@ describe('<UserProfile />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('Should correctly render userdata', () => {
-    const component = renderer.create(<UserProfile userData={props} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+  test('Should render two buttons', () => {
+    expect(wrapper.find('button')).toHaveLength(2);
   });
 
-  test('Should render following state', () => {
-    const component = renderer.create(<UserProfile following={false} />);
-    const tree = component.toJSON();
+  test('Should render appropriate text based on props', () => {
+    const handleButton = wrapper.find('button').first();
+    expect(handleButton.prop('children').toLowerCase()).toEqual('following');
+    handleButton.simulate('click');
+    expect(props.handleFollow).toHaveBeenCalled();
 
-    expect(tree).toMatchSnapshot();
-  });
-
-  test('Should work with props', () => {
-    const component = shallow(<UserProfile {...props} />);
-    const propsOut = Array.from(Object.keys(component.props()));
-    expect(propsOut.length).toBe(2);
+    wrapper.setProps({ isFollowing: false });
+    const handleButton2 = wrapper.find('button').first();
+    expect(handleButton2.prop('children').toLowerCase()).toEqual('follow');
   });
 });

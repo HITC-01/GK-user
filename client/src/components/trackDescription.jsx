@@ -26,7 +26,7 @@ class TrackDescription extends React.Component {
     const message = songData.description || '';
     const showDescription = isToggleOn ? 'show' : 'hide';
     const hash = hashtags.length > 2 ? <HashTag hash={hashtags} /> : '';
-    const clickDisplay = isToggleOn ? 'Show More v' : 'Show Less ^ ';
+    const clickDisplay = isToggleOn ? '--- Show More v ---' : '--- Show Less ^ ---';
     return (
       <div className="utd-wrapper">
         <div className={`utd-panel utd-${showDescription} `}>
@@ -38,7 +38,7 @@ class TrackDescription extends React.Component {
         <div className={`up-fade-${showDescription}`} />
         <br />
         <div className="utd-button-div">
-          <button type="button" className="utd-toggle" onClick={this.handleClick} onKeyDown={this.handleClick}>
+          <button type="button" className="utd-toggle" onClick={this.handleClick}>
             {clickDisplay}
           </button>
         </div>
