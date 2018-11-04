@@ -80,4 +80,3 @@ Page.defaultProps = {
 };
 
 export default Page;
-
