@@ -3,7 +3,8 @@ import styles from './styles/nav.css';
 
 const Nav = () => {
   const icon = {
-    soundcloud: <i className="fab fa-soundcloud" style={{'fontSize': '47px',
+    soundcloud: <i className="fab fa-soundcloud" style={{
+      fontSize: '47px',
       color: 'white',
       background: '#f50',}}/>,
     search:  <i className="fas fa-search" style={
