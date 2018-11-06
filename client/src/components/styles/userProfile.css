@@ -1,0 +1,75 @@
+.up-button {
+  border-radius: 20%;
+  text-align: center;
+  font-size: 11px;
+  padding: 2px 9px 2px 8px;
+  height: 22px;
+  line-height: 16px;
+}
+.up-container {
+  padding: 10px;
+}
+
+.up-photo {
+  border-radius: 80%;
+}
+
+.up-username {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0px 10px 0px 0px;
+  word-break: normal;
+  text-transform: uppercase;
+}
+
+.up-followcount {
+  width: 20px;
+  padding: 0px 10px 0px 5px;
+  color:grey;
+}
+
+.up-trackcount {
+  width: 50px;
+  margin: 0px 7px;
+  color:grey;
+}
+
+.black:hover {
+  color:black;
+}
+.up-button:hover {
+  border-color: #f50
+}
+
+.up-button:hover {
+  border-color: #f50
+}
+
+.up-follow {
+  background-color: #f50;
+  border: 1px solid #f50;
+  color: white;
+}
+
+.up-following {
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  color: #f50;
+}
+
+
+
+.up-report-button {
+  border: none;
+  background-color: inherit;
+  padding: 5px 5px;
+  font-size: 11px;
+  color: grey;
+  cursor: pointer;
+  display: inline-block;
+}
+body {
+  font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  color: black;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './styles/page.css';
 
+import Nav from './nav.jsx';
 import TrackDescription from './trackDescription.jsx';
 import UserProfile from './userProfile.jsx';
 import ReportPage from './reportPage.jsx';
@@ -55,7 +57,9 @@ class Page extends React.Component {
       show,
     } = this.state;
     return (
-      <div className="up-app">
+      <div> 
+      <Nav />
+      <div className={styles["up-app"]}>
         <UserProfile
           isFollowing={isFollowing}
           handleFollow={this.handleFollow}
@@ -66,6 +70,7 @@ class Page extends React.Component {
           songData={data}
         />
         <ReportPage show={show} handleClose={this.handleModal} />
+      </div>
       </div>
     );
   }

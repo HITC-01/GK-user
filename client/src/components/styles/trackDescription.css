@@ -1,0 +1,53 @@
+.utd-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 40em;
+}
+
+.utd-panel {
+  width: 50em;
+  position: relative;
+}
+
+.utd-show {
+  overflow: hidden;
+  max-height: 9em;
+}
+
+.utd-hide {
+  overflow: visible;
+}
+
+.utd {
+  margin: 10px;
+  font-size: 14px;
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  font-weight: 100;
+}
+
+.up-fade-show {
+  background: linear-gradient(transparent, white);
+  height: 100px;
+  margin-top: -100px;
+  position: relative;
+}
+
+.up-fade-hide {
+  position: relative;
+}
+
+.utd-button-div {
+  position: relative;
+}
+
+
+.utd-toggle {
+  border: none;
+  position: absolute;
+  color: grey;
+}
+
+.utd-hash {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,4 @@
+.up-app {
+  display: flex;
+  flex-direction: row;
+}

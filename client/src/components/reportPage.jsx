@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './styles/reportPage.css';
 
 const ReportPage = ({ handleClose, show }) => {
   const marginStyle = { margin: '10px' };
@@ -7,15 +8,15 @@ const ReportPage = ({ handleClose, show }) => {
   const violations = ['Copyright Infringement', 'Privacy Violation', 'Pornographic Content', 'Abuse', 'Hate Speech', ' Illegal Content', 'Other'];
   const reportLinks = violations.map((violation) => {
     return (
-      <li className="black" key={violation}>
+      <li className={styles["black"]} key={violation}>
         {violation}
       </li>
     );
   });
 
   return (
-    <div className={`${showHideClassName}`}>
-      <div className="up-modal">
+    <div className={styles[`${showHideClassName}`]}>
+      <div className={styles["up-modal"]}>
         <section style={{ margin: '4px' }}>
           <h1 style={marginStyle}> Report Track For </h1>
           <hr style={marginStyle} />

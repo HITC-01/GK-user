@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './styles/userProfile.css';
 
 const UserProfile = ({
   userData, isFollowing, handleFollow, handleModal,
@@ -31,26 +32,26 @@ const UserProfile = ({
 
 
   return (
-    <div className="up-container">
-      <img className="up-photo" src={data.profilePhoto} alt="Loading" />
+    <div className={styles["up-container"]}>
+      <img className={styles["up-photo"]} src={data.profilePhoto} alt="Loading" />
       <br />
-      <span title={`Visit ${username}'s profile`} className="up-username">
+      <span title={`Visit ${username}'s profile`} className={styles["up-username"]}>
         {username}
         {data.pro === 'true' ? icon.bolt : ''}
       </span>
       <br />
       {icon.followers}
-      <span title={`${data.followers} followers`} className="up-followcount black">
+      <span title={`${data.followers} followers`} className={styles["up-followcount"], styles[`black`]}>
         {followCount}
       </span>
       {icon.headphones}
-      <span title={`${data.trackCount} tracks`} className="up-trackcount black">
+      <span title={`${data.trackCount} tracks`} className={styles["up-trackcount"], styles[`black`]}>
         {trackCount}
       </span>
       <br />
       <button
         type="button"
-        className={`up-button up-${followStatus}`}
+        className={styles[`up-button`],styles[`up-${followStatus}`]}
         title={`${followStatus}`}
         onClick={handleFollow}
       >
@@ -62,7 +63,7 @@ const UserProfile = ({
         <button
           type="button"
           onClick={handleModal}
-          className="up-report-button black"
+        className={styles[`up-report-button`],styles['black']}
         >
           Report
         </button>

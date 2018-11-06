@@ -1,4 +1,4 @@
-header {
+/* header {
   width: 100%;
   font: 100 14px/1.5 "Interstate","Lucida Grande",Arial,sans-serif;
   background: #333;
@@ -6,19 +6,19 @@ header {
   flex-direction: row;
   height: 46px;
   transition: height .2s ease-in-out;
-}
+} */
 
-.bar-left {
+/* .bar-left {
   display: flex;
   flex-direction: row;
-}
-.fa-soundcloud {
+} */
+/* .fa-soundcloud {
   font-size: 47px;
   color: white;
   background: #f50;
-}
+} */
 
-.bl {
+/* .bl {
   padding: 12px 0;  
   width: 104px;
   height: 46px;
@@ -26,9 +26,9 @@ header {
   border-right: 1px solid #111;
   box-sizing: border-box;
   text-align: center;
-}
+} */
 
-.bar-center {
+/* .bar-center {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -36,9 +36,9 @@ header {
   height: 46px;
   color:white;
   text-align: center;
-}
+} */
 
-.bc-search {
+/* .bc-search {
   color: #666;
   width: 95%;
   outline: 0;
@@ -46,8 +46,8 @@ header {
   background: #e5e5e5;
   text-align: center;
   position: relative;
-}
-
+} */
+/* 
 .bc-search2 {
   padding:8px;
   display:block;
@@ -55,9 +55,9 @@ header {
   border:none;
   width:100%;
   border-radius:8px
-}
+} */
 
-.fa-search {
+/* .fa-search {
   font-size: 31px;
   margin: 2px;
   border: 1px;
@@ -66,8 +66,8 @@ header {
   background: #e5e5e5;
   padding: 7px;
   position: relative;
-}
-
+} */
+/* 
 .bar-right {
   display: flex;
   flex-direction: row;
@@ -76,9 +76,9 @@ header {
   height: 46px;
   color:white;
   text-align: center;
-}
+} */
 
-.fa-user-circle {
+/* .fa-user-circle {
   font-size: 31px;
   margin: 2px;
   border: 1px;
@@ -87,7 +87,7 @@ header {
   background: #e5e5e5;
   padding: 7px;
   position: relative;
-}
+} */
 
 
 /*User Profile & Track Description Component*/
@@ -103,7 +103,7 @@ li {
 }
 
 /* modal features - Refer to ReportPage Component */
-.up-modalWrapper {
+/* .up-modalWrapper {
   position: fixed;
   z-index: 100;
   height: 100%;
@@ -124,56 +124,56 @@ li {
 
 .up-display-none {
   display: none;
-}
+} */
 
 /*user profile container - Refer to UserProfile Component */
-.up-container {
+/* .up-container {
   padding: 10px;
-}
+} */
 
 /*Track Description Starts*/
-.utd-wrapper {
+/* .utd-wrapper {
   display: flex;
   flex-direction: column;
-}
+} */
 
-.utd-hash {
+/* .utd-hash {
   display: flex;
   flex-direction: row;
-}
+} */
 
-.utd-panel {
+/* .utd-panel {
   width: 50em;
   position: relative;
-}
+} */
 
-.utd-show {
+/* .utd-show {
   overflow: hidden;
   max-height: 9em;
 }
 
 .utd-hide {
   overflow: visible;
-}
+} */
 
-.utd-toggle {
+/* .utd-toggle {
   border: none;
   position: absolute;
   color: grey;
-}
-
+} */
+/* 
 .utd-button-div {
   position: relative;
-}
+} */
 
-.utd {
+/* .utd {
   margin: 10px;
   font-size: 14px;
   font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
   font-weight: 100;
-}
+} */
 
-.up-fade-show {
+/* .up-fade-show {
   background: linear-gradient(transparent, white);
   height: 100px;
   margin-top: -100px;
@@ -182,10 +182,10 @@ li {
 
 .up-fade-hide {
   position: relative;
-}
+} */
 
 /*Track Description Ends*/
-
+/* 
 .up-hash {
   position: relative;
   display: inline-block;
@@ -203,26 +203,26 @@ li {
   white-space: nowrap;
   cursor: pointer;
   border-radius: 20px;
-}
-
+} */
+/* 
 .up-app {
   display: flex;
   flex-direction: row;
-}
+} */
 
-.up-followcount {
+/* .up-followcount {
   width: 20px;
   padding: 0px 10px 0px 5px;
   color:grey;
-}
+} */
 
-.up-trackcount {
+/* .up-trackcount {
   width: 50px;
   margin: 0px 7px;
   color:grey;
-}
+} */
 
-.up-report-button {
+/* .up-report-button {
   border: none;
   background-color: inherit;
   padding: 5px 5px;
@@ -230,19 +230,19 @@ li {
   color: grey;
   cursor: pointer;
   display: inline-block;
-}
+} */
 
 
-.up-button {
+/* .up-button {
   border-radius: 20%;
   text-align: center;
   font-size: 11px;
   padding: 2px 9px 2px 8px;
   height: 22px;
   line-height: 16px;
-}
+} */
 
-.up-follow {
+/* .up-follow {
   background-color: #f50;
   border: 1px solid #f50;
   color: white;
@@ -252,33 +252,33 @@ li {
   background-color: white;
   border: 1px solid #e5e5e5;
   color: #f50;
-}
+} */
 
-.up-bt-show-more {
+/* .up-bt-show-more {
   border: none;
   font-size: 11px;
   color: grey;
-}
-
+} */
+/* 
 .up-photo {
   border-radius: 80%;
-}
+} */
 
-.up-bolt {
+/* .up-bolt {
   color: #f50;
-}
+} */
 
-.up-username {
+/* .up-username {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 0px 10px 0px 0px;
   word-break: normal;
   text-transform: uppercase;
-}
+} */
 
 /* hover features */
-li:hover {
+/* li:hover {
   color: black;
 }
 .black:hover {
@@ -286,4 +286,4 @@ li:hover {
 }
 .up-button:hover {
   border-color: #f50
-}
+} */

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './styles/trackDescription.css';
 
 import HashTag from './hashtag.jsx';
 
@@ -28,17 +29,17 @@ class TrackDescription extends React.Component {
     const hash = hashtags.length > 2 ? <HashTag hash={hashtags} /> : '';
     const clickDisplay = isToggleOn ? '--- Show More v ---' : '--- Show Less ^ ---';
     return (
-      <div className="utd-wrapper">
-        <div className={`utd-panel utd-${showDescription} `}>
-          <p className="utd">{message}</p>
-          <div className="utd-hash">
+      <div className={styles["utd-wrapper"]}>
+        <div className={styles[`utd-panel`],styles[`utd-${showDescription}`]}>
+          <p className={styles["utd"]}>{message}</p>
+          <div className={styles["utd-hash"]}>
             {hash}
           </div>
         </div>
-        <div className={`up-fade-${showDescription}`} />
+        <div className={styles[`up-fade-${showDescription}`]} />
         <br />
-        <div className="utd-button-div">
-          <button type="button" className="utd-toggle" onClick={this.handleClick}>
+        <div className={styles["utd-button-div"]}>
+          <button type="button" className={styles["utd-toggle"]} onClick={this.handleClick}>
             {clickDisplay}
           </button>
         </div>

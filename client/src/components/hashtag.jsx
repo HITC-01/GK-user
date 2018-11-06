@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './styles/hashtag.css';
 
 const HashTag = ({ hash }) => {
   return (
-    <div>
-      <span className="up-hash">
+    <div className={styles["utd-hash"]}>
+      <span className={styles.hash}>
       #
         {hash}
       </span>
