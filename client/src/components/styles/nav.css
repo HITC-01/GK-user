@@ -8,7 +8,7 @@
   transition: height .2s ease-in-out;
 }
 
-.bar-left {
+.left {
   display: flex;
   flex-direction: row;
 }
@@ -22,7 +22,7 @@
   text-align: center;
 }
 
-.bar-right {
+.right {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -32,7 +32,7 @@
   text-align: center;
 }
 
-.bar-center {
+.center {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -52,7 +52,7 @@
 }
 
 
-.bc-search2 {
+.search {
   padding:8px;
   display:block;
   background: #e5e5e5;

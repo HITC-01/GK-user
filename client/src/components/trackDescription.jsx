@@ -29,10 +29,10 @@ class TrackDescription extends React.Component {
     const hash = hashtags.length > 2 ? <HashTag hash={hashtags} /> : '';
     const clickDisplay = isToggleOn ? '--- Show More v ---' : '--- Show Less ^ ---';
     return (
-      <div className={styles["utd-wrapper"]}>
-        <div className={styles[`utd-panel`],styles[`utd-${showDescription}`]}>
+      <div className={styles.wrapper}>
+        <div className={styles.panel, styles[`utd-${showDescription}`]}>
           <p className={styles["utd"]}>{message}</p>
-          <div className={styles["utd-hash"]}>
+          <div className={styles.hash}>
             {hash}
           </div>
         </div>

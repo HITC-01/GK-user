@@ -1,10 +1,10 @@
-.utd-wrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
   width: 40em;
 }
 
-.utd-panel {
+.panel {
   width: 50em;
   position: relative;
 }
@@ -47,7 +47,7 @@
   color: grey;
 }
 
-.utd-hash {
+.hash {
   display: flex;
   flex-direction: row;
 }
