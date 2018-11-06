@@ -11,10 +11,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use('/songs', express.static(path.join(__dirname, '../client/dist')));
+app.use('/songs/:songId', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+});
 
 
-app.get('/songs/:song', (req, res) => {
-  const songId = req.params.song;
+app.get('/track/:songId', (req, res) => {
+  const songId = req.params.songId;
   const select = `
   songs.description,
   songs.hashtags,

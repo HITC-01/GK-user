@@ -72,5 +72,6 @@
     "react-dom": "^16.5.2",
     "react-test-renderer": "^16.6.0",
     "underscore": "^1.8.3"
-  }
+  },
+  "proxy": "http://localhost:3000"
 }

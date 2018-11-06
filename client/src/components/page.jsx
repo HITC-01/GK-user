@@ -10,11 +10,13 @@ import ReportPage from './reportPage.jsx';
 class Page extends React.Component {
   constructor(props) {
     super(props);
-    this.url = props.url;
+    const path = parseInt(window.location.pathname.split('/').pop());
+    this.url =props.url;
     this.state = {
       data: {},
       isFollowing: true,
       show: false,
+      songId: path,
     };
     this.getData = this.getData.bind(this);
     this.handleFollow = this.handleFollow.bind(this);
@@ -22,15 +24,15 @@ class Page extends React.Component {
   }
 
   componentDidMount() {
-    const songId = Math.floor(Math.random() * 100) + 1;
-    this.getData(songId)
+    this.getData()
       .catch(() => {
         console.log('Error in Component Mount');
       });
   }
 
-  getData(songId) {
-    const url = `${this.url}/songs/${songId}`;
+  getData() {
+    const { songId } = this.state;
+    const url = `/track/${songId}`;
     return fetch(url, { method: 'GET' })
       .then((resData) => { return resData.json(); })
       .then((dataArray) => {
