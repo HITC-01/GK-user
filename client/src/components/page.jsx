@@ -29,7 +29,7 @@ class Page extends React.Component {
   }
 
   getData(songId) {
-    const url = `${this.url}/songs/${songId}`;
+    const url = `${this.url}/user/songs/${songId}`;
     return fetch(url, { method: 'GET' })
       .then((resData) => { return resData.json(); })
       .then((dataArray) => {
@@ -56,7 +56,7 @@ class Page extends React.Component {
       show,
     } = this.state;
     return (
-      <div className={styles["up-app"]}>
+      <div className={styles['up-app']}>
         <UserProfile
           isFollowing={isFollowing}
           handleFollow={this.handleFollow}
