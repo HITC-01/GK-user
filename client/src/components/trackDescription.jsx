@@ -30,16 +30,16 @@ class TrackDescription extends React.Component {
     const clickDisplay = isToggleOn ? '--- Show More v ---' : '--- Show Less ^ ---';
     return (
       <div className={styles.wrapper}>
-        <div className={styles.panel, styles[`utd-${showDescription}`]}>
-          <p className={styles["utd"]}>{message}</p>
+        <div className={`${styles.panel}, ${styles[`${showDescription}`]}`}>
+          <p className={styles.utd}>{message}</p>
           <div className={styles.hash}>
             {hash}
           </div>
         </div>
         <div className={styles[`up-fade-${showDescription}`]} />
         <br />
-        <div className={styles["utd-button-div"]}>
-          <button type="button" className={styles["utd-toggle"]} onClick={this.handleClick}>
+        <div className={styles.buttonDiv}>
+          <button type="button" className={styles.toggle} onClick={this.handleClick}>
             {clickDisplay}
           </button>
         </div>

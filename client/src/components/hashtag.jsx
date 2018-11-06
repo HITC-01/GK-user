@@ -4,7 +4,7 @@ import styles from './styles/hashtag.css';
 
 const HashTag = ({ hash }) => {
   return (
-    <div className={styles["utd-hash"]}>
+    <div>
       <span className={styles.hash}>
       #
         {hash}

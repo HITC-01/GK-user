@@ -32,26 +32,26 @@ const UserProfile = ({
 
 
   return (
-    <div className={styles["up-container"]}>
-      <img className={styles["up-photo"]} src={data.profilePhoto} alt="Loading" />
+    <div className={styles.container}>
+      <img className={styles.photo} src={data.profilePhoto} alt="Loading" />
       <br />
-      <span title={`Visit ${username}'s profile`} className={styles["up-username"]}>
+      <span title={`Visit ${username}'s profile`} className={styles.username}>
         {username}
         {data.pro === 'true' ? icon.bolt : ''}
       </span>
       <br />
       {icon.followers}
-      <span title={`${data.followers} followers`} className={styles["up-followcount"], styles[`black`]}>
+      <span title={`${data.followers} followers`} className={`${styles.followcount} ${styles.black}`}>
         {followCount}
       </span>
       {icon.headphones}
-      <span title={`${data.trackCount} tracks`} className={styles["up-trackcount"], styles[`black`]}>
+      <span title={`${data.trackCount} tracks`} className={`${styles.trackcount} ${styles.black}`}>
         {trackCount}
       </span>
       <br />
       <button
         type="button"
-        className={styles[`up-button`],styles[`up-${followStatus}`]}
+        className={`${styles.button} ${styles[`${followStatus}`]}`}
         title={`${followStatus}`}
         onClick={handleFollow}
       >
@@ -63,7 +63,7 @@ const UserProfile = ({
         <button
           type="button"
           onClick={handleModal}
-        className={styles[`up-report-button`],styles['black']}
+        className={`${styles.reportButton} ${styles.black}`}
         >
           Report
         </button>

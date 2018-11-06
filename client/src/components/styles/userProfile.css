@@ -1,20 +1,21 @@
-.up-button {
+.button {
   border-radius: 20%;
   text-align: center;
   font-size: 11px;
+  margin: 2px;
   padding: 2px 9px 2px 8px;
   height: 22px;
   line-height: 16px;
 }
-.up-container {
+.container {
   padding: 10px;
 }
 
-.up-photo {
+.photo {
   border-radius: 80%;
 }
 
-.up-username {
+.username {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -23,13 +24,13 @@
   text-transform: uppercase;
 }
 
-.up-followcount {
+.followcount {
   width: 20px;
   padding: 0px 10px 0px 5px;
   color:grey;
 }
 
-.up-trackcount {
+.trackcount {
   width: 50px;
   margin: 0px 7px;
   color:grey;
@@ -38,21 +39,18 @@
 .black:hover {
   color:black;
 }
-.up-button:hover {
+.button:hover {
   border-color: #f50
 }
 
-.up-button:hover {
-  border-color: #f50
-}
 
-.up-follow {
+.follow {
   background-color: #f50;
   border: 1px solid #f50;
   color: white;
 }
 
-.up-following {
+.following {
   background-color: white;
   border: 1px solid #e5e5e5;
   color: #f50;
@@ -60,7 +58,7 @@
 
 
 
-.up-report-button {
+.reportButton {
   border: none;
   background-color: inherit;
   padding: 5px 5px;

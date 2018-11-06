@@ -9,12 +9,12 @@
   position: relative;
 }
 
-.utd-show {
+.show {
   overflow: hidden;
   max-height: 9em;
 }
 
-.utd-hide {
+.hide {
   overflow: visible;
 }
 
@@ -36,12 +36,12 @@
   position: relative;
 }
 
-.utd-button-div {
+.buttonDiv {
   position: relative;
 }
 
 
-.utd-toggle {
+.toggle {
   border: none;
   position: absolute;
   color: grey;

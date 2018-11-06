@@ -42,8 +42,8 @@ const Nav = () => {
     <header className={styles.header}>
       <div className={styles.left}>
         {icon.soundcloud}
-        <a className={styles.left, styles.bl}> Home </a>
-        <a className={styles.left, styles.bl}> Collection </a>
+        <a className={`${styles.left}, ${styles.bl}`}> Home </a>
+        <a className={`${styles.left}, ${styles.bl}`}> Collection </a>
       </div>
         <div className={styles.center}>
           <form className={styles.center}>
