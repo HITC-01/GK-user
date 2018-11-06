@@ -18,7 +18,7 @@
 ## Usage
 
 > Some usage instructions
-The MySQL database is seeded with data using faker. Some examples include a random image avatar for the user, count of followers, username, and track description. Our group used localhost with port numbers ranging form 3000 to 3004. This component utilizes port 3001. 
+The MySQL database is seeded with data using faker. Some examples include a random image avatar for the user, count of followers, username, and track description. Our group used localhost with port numbers ranging form 3000 to 3004. This component utilizes port 3001.
 
 ## Requirements
 
@@ -31,6 +31,15 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 ### Installing Dependencies
 
+```sh
+npm install
+npm run db:setup
+npm run dev:react
+npm start
+```
 From within the root directory:
-Run `npm install` to install the necessary dependencies. 
-In order to start the server, type in `npm start` on the command line. Then, type in `npm run dev:react` to set up the compiler and then `npm run db:setup` to seed from the sql database. Additionally, there are tests that have been writting which can be seen through 'npm test'. 
+Run `npm install` to install the necessary dependencies.
+In order to start the server, type in `npm start` on the command line. Then, type
+in `npm run dev:react` to set up the compiler and then `npm run db:setup` to
+seed from the sql database. Additionally, there are tests that have been writting
+which can be seen through 'npm test'.

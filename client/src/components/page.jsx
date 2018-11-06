@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles/page.css';
 
-import Nav from './nav.jsx';
 import TrackDescription from './trackDescription.jsx';
 import UserProfile from './userProfile.jsx';
 import ReportPage from './reportPage.jsx';
@@ -11,6 +10,7 @@ class Page extends React.Component {
   constructor(props) {
     super(props);
     this.url = props.url;
+    this.songId = props.songId;
     this.state = {
       data: {},
       isFollowing: true,
@@ -22,8 +22,7 @@ class Page extends React.Component {
   }
 
   componentDidMount() {
-    const songId = Math.floor(Math.random() * 100) + 1;
-    this.getData(songId)
+    this.getData(this.songId)
       .catch(() => {
         console.log('Error in Component Mount');
       });
@@ -57,8 +56,6 @@ class Page extends React.Component {
       show,
     } = this.state;
     return (
-      <div> 
-      <Nav />
       <div className={styles["up-app"]}>
         <UserProfile
           isFollowing={isFollowing}
@@ -71,17 +68,18 @@ class Page extends React.Component {
         />
         <ReportPage show={show} handleClose={this.handleModal} />
       </div>
-      </div>
     );
   }
 }
 
 Page.propTypes = {
   url: PropTypes.string,
+  songId: PropTypes.number,
 };
 
 Page.defaultProps = {
   url: '',
+  songId: 1,
 };
 
 export default Page;

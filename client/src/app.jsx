@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Page from './components/page.jsx';
+import Nav from './components/nav.jsx';
 
-ReactDOM.render(<Page />, document.getElementById('app'));
+window.Page = Page;
+window.Nav = Nav;
