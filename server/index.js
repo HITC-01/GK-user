@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -12,7 +13,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, '../client/dist')));
+
+app.use('/songs/:songId', express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/user/songs/:song', (req, res) => {
   const songId = req.params.song;
