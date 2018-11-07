@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/songs/:song', (req, res) => {
+app.get('/user/songs/:song', (req, res) => {
   const songId = req.params.song;
   const select = `
   songs.description,
