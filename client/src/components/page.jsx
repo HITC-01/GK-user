@@ -29,14 +29,8 @@ class Page extends React.Component {
       });
   }
 
-<<<<<<< HEAD
   getData(songId) {
     const url = `${this.url}/user/songs/${songId}`;
-=======
-  getData() {
-    const { songId } = this.state;
-    const url = `/user/${songId}`;
->>>>>>> e31aaa8986558ef5d19a2e0d9e7e44cdbce75692
     return fetch(url, { method: 'GET' })
       .then((resData) => { return resData.json(); })
       .then((dataArray) => {
