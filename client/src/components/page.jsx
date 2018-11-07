@@ -61,7 +61,6 @@ class Page extends React.Component {
     } = this.state;
     return (
       <div> 
-      <Nav />
       <div className={styles["up-app"]}>
         <UserProfile
           isFollowing={isFollowing}
