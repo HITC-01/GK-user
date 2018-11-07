@@ -32,7 +32,7 @@ class Page extends React.Component {
 
   getData() {
     const { songId } = this.state;
-    const url = `/track/${songId}`;
+    const url = `/track/22`;
     return fetch(url, { method: 'GET' })
       .then((resData) => { return resData.json(); })
       .then((dataArray) => {
