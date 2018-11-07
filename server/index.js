@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 
 const bodyParser = require('body-parser');
@@ -10,15 +12,13 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, '../client/dist')));
-app.use('/songs', express.static(path.join(__dirname, '../client/dist')));
-app.use('/songs/:songId', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
-});
+
+app.use('/songs/:songId', express.static(path.join(__dirname, '../client/dist')));
 
 
-app.get('/track/:songId', (req, res) => {
+app.get('/user/:songId', (req, res) => {
   const songId = req.params.songId;
+  console.log(req.params)
   const select = `
   songs.description,
   songs.hashtags,

@@ -10,13 +10,14 @@ import ReportPage from './reportPage.jsx';
 class Page extends React.Component {
   constructor(props) {
     super(props);
-    const path = parseInt(window.location.pathname.split('/').pop());
+    const path = window.location.pathname.split('/');
+    const id = parseInt(path[2]);
     this.url =props.url;
     this.state = {
       data: {},
       isFollowing: true,
       show: false,
-      songId: path,
+      songId: id,
     };
     this.getData = this.getData.bind(this);
     this.handleFollow = this.handleFollow.bind(this);
@@ -32,7 +33,7 @@ class Page extends React.Component {
 
   getData() {
     const { songId } = this.state;
-    const url = `/track/22`;
+    const url = `/user/${songId}`;
     return fetch(url, { method: 'GET' })
       .then((resData) => { return resData.json(); })
       .then((dataArray) => {

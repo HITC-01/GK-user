@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS soundcloud;
-CREATE DATABASE soundcloud;
-USE soundcloud;
+DROP DATABASE IF EXISTS fecuser;
+CREATE DATABASE fecuser;
+USE fecuser;
 
 DROP TABLE IF EXISTS users;
 		
