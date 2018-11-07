@@ -40,21 +40,23 @@ const Nav = () => {
   };
   return (
     <header className={styles.header}>
-      <div className={styles.left}>
-        {icon.soundcloud}
-        <a className={`${styles.left}, ${styles.bl}`}> Home </a>
-        <a className={`${styles.left}, ${styles.bl}`}> Collection </a>
-      </div>
-        <div className={styles.center}>
-          <form className={styles.center}>
-            <input className={styles.search} placeholder="Search" type="text" />
-            {icon.search}
-          </form>
+      <div className={styles.navAll}>
+        <div className={styles.left}>
+          {icon.soundcloud}
+          <a className={`${styles.left}, ${styles.bl}`}> Home </a>
+          <a className={`${styles.left}, ${styles.bl}`}> Collection </a>
         </div>
-      <div className={styles.right}>
-        <a className={styles.right, styles.bl}> Try Pro </a>
-        <a className={styles.right, styles.bl}> Upload </a>
-        {icon.user}
+          <div className={styles.center}>
+            <form className={styles.center}>
+              <input className={styles.search} placeholder="Search" type="text" />
+              {icon.search}
+            </form>
+          </div>
+        <div className={styles.right}>
+          <a className={styles.right, styles.bl}> Try Pro </a>
+          <a className={styles.right, styles.bl}> Upload </a>
+          {icon.user}
+        </div>
       </div>
     </header>
   );

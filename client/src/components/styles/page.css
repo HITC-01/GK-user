@@ -1,6 +1,5 @@
 .up-app {
   margin: 0 auto;
-  width: 960px;
   display: flex;
   flex-direction: row;
 }
