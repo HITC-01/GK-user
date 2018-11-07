@@ -10,12 +10,11 @@ class Page extends React.Component {
   constructor(props) {
     super(props);
     this.url = props.url;
-    this.songId = props.songId;
     this.state = {
       data: {},
       isFollowing: true,
       show: false,
-      songId: id,
+      songId: props.songId,
     };
     this.getData = this.getData.bind(this);
     this.handleFollow = this.handleFollow.bind(this);
@@ -23,7 +22,8 @@ class Page extends React.Component {
   }
 
   componentDidMount() {
-    this.getData(this.songId)
+    const { songId } = this.state;
+    this.getData(songId)
       .catch(() => {
         console.log('Error in Component Mount');
       });

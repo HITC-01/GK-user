@@ -13,8 +13,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 app.use('/songs/:songId', express.static(path.join(__dirname, '../client/dist')));
+app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/user/songs/:song', (req, res) => {
   const songId = req.params.song;
