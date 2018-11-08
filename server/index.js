@@ -1,23 +1,24 @@
 require('dotenv').config();
 
 const express = require('express');
-const cors = require('cors');
+
 const bodyParser = require('body-parser');
 const path = require('path');
 const db = require('../database/index.js');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = 3001;
 
-app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/songs/:songId', express.static(path.join(__dirname, '../client/dist')));
-app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/user/songs/:song', (req, res) => {
-  const songId = req.params.song;
+app.use('/songs/:songId', express.static(path.join(__dirname, '../client/dist')));
+
+
+app.get('/user/:songId', (req, res) => {
+  const songId = req.params.songId;
+  console.log(req.params)
   const select = `
   songs.description,
   songs.hashtags,
@@ -40,5 +41,5 @@ app.get('/user/songs/:song', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Listening to port ${port}!`);
+  console.log('Listening to port 3001!');
 });

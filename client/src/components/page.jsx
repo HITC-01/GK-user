@@ -9,12 +9,14 @@ import ReportPage from './reportPage.jsx';
 class Page extends React.Component {
   constructor(props) {
     super(props);
+    const path = window.location.pathname.split('/');
+    const id = parseInt(path[2]);
     this.url = props.url;
     this.state = {
       data: {},
       isFollowing: true,
       show: false,
-      songId: props.songId,
+      songId: id,
     };
     this.getData = this.getData.bind(this);
     this.handleFollow = this.handleFollow.bind(this);
@@ -22,15 +24,15 @@ class Page extends React.Component {
   }
 
   componentDidMount() {
-    const { songId } = this.state;
-    this.getData(songId)
+    this.getData()
       .catch(() => {
         console.log('Error in Component Mount');
       });
   }
 
-  getData(songId) {
-    const url = `${this.url}/user/songs/${songId}`;
+  getData() {
+    const { songId } = this.state;
+    const url = `/user/${songId}`;
     return fetch(url, { method: 'GET' })
       .then((resData) => { return resData.json(); })
       .then((dataArray) => {
@@ -57,7 +59,8 @@ class Page extends React.Component {
       show,
     } = this.state;
     return (
-      <div className={styles['up-app']}>
+      <div> 
+      <div className={styles["up-app"]}>
         <UserProfile
           isFollowing={isFollowing}
           handleFollow={this.handleFollow}
@@ -69,18 +72,17 @@ class Page extends React.Component {
         />
         <ReportPage show={show} handleClose={this.handleModal} />
       </div>
+      </div>
     );
   }
 }
 
 Page.propTypes = {
   url: PropTypes.string,
-  songId: PropTypes.number,
 };
 
 Page.defaultProps = {
   url: '',
-  songId: 1,
 };
 
 export default Page;
