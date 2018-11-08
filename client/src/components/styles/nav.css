@@ -3,15 +3,22 @@
   font: 100 14px/1.5 "Interstate","Lucida Grande",Arial,sans-serif;
   background: #333;
   display: flex;
+  justify-content: center;
   flex-direction: row;
   height: 46px;
   transition: height .2s ease-in-out;
+}
+
+.navAll {
+  width: 960px;
+  display: flex;
 }
 
 .left {
   display: flex;
   flex-direction: row;
 }
+
 .bl {
   padding: 12px 0;  
   width: 104px;
