@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles/page.css';
 
-import Nav from './nav.jsx';
 import TrackDescription from './trackDescription.jsx';
 import UserProfile from './userProfile.jsx';
 import ReportPage from './reportPage.jsx';
@@ -12,7 +11,7 @@ class Page extends React.Component {
     super(props);
     const path = window.location.pathname.split('/');
     const id = parseInt(path[2]);
-    this.url =props.url;
+    this.url = props.url;
     this.state = {
       data: {},
       isFollowing: true,
