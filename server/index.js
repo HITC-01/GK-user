@@ -7,7 +7,7 @@ const path = require('path');
 const db = require('../database/index.js');
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3003;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,7 +18,6 @@ app.use('/songs/:songId', express.static(path.join(__dirname, '../client/dist'))
 
 app.get('/user/:songId', (req, res) => {
   const songId = req.params.songId;
-  console.log(req.params)
   const select = `
   songs.description,
   songs.hashtags,

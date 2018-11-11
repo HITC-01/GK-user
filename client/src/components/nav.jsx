@@ -39,25 +39,25 @@ const Nav = () => {
     />,
   };
   return (
-    <header className={styles.header}>
-    <div className={styles.navAll}>
-      <div className={styles.left}>
-        {icon.soundcloud}
-        <a className={`${styles.left}, ${styles.bl}`}> Home </a>
-        <a className={`${styles.left}, ${styles.bl}`}> Collection </a>
+    <header className={styles.navHeader}>
+      <div className={styles.navAll}>
+        <div className={styles.navLeft}>
+          {icon.soundcloud}
+          <a className={styles.navBlock}> Home </a>
+          <a className={styles.navBlock}> Collection </a>
+        </div>
+        <div className={styles.navCenter}>
+          <form className={styles.navCenter}>
+            <input className={styles.navSearch} placeholder="Search" type="text" />
+            {icon.search}
+          </form>
+        </div>
+        <div className={styles.navRight}>
+          <a className={styles.navBlock}> Try Pro </a>
+          <a className={styles.navBlock}> Upload </a>
+          {icon.user}
+        </div>
       </div>
-      <div className={styles.center}>
-        <form className={styles.center}>
-          <input className={styles.search} placeholder="Search" type="text" />
-          {icon.search}
-        </form>
-      </div>
-      <div className={styles.right}>
-        <a className={`${styles.right}, ${styles.bl}`}> Try Pro </a>
-        <a className={`${styles.right}, ${styles.bl}`}> Upload </a>
-        {icon.user}
-      </div>
-    </div>
     </header>
   );
 };

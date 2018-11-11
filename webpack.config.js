@@ -1,9 +1,9 @@
 const path = require('path');
-
+var webpack = require('webpack');
+var CompressionPlugin = require('compression-webpack-plugin');
 const SRC_DIR = path.join(__dirname, '/client/src');
 const DIST_DIR = path.join(__dirname, '/client/dist');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: `${SRC_DIR}/app.jsx`,
@@ -14,6 +14,14 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  plugins: [
+    new webpack.DefinePlugin({ //<--key to reduce React's size
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new CompressionPlugin()
+  ],
   module: {
     rules: [
       {

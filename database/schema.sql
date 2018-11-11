@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS fecuser;
-CREATE DATABASE fecuser;
-USE fecuser;
+DROP DATABASE IF EXISTS hitcuser;
+CREATE DATABASE hitcuser;
+USE hitcuser;
 
 DROP TABLE IF EXISTS users;
 		

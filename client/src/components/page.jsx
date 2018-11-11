@@ -59,19 +59,19 @@ class Page extends React.Component {
       show,
     } = this.state;
     return (
-      <div> 
-      <div className={styles["up-app"]}>
-        <UserProfile
-          isFollowing={isFollowing}
-          handleFollow={this.handleFollow}
-          userData={data}
-          handleModal={this.handleModal}
-        />
-        <TrackDescription
-          songData={data}
-        />
-        <ReportPage show={show} handleClose={this.handleModal} />
-      </div>
+      <div>
+        <div className={styles["up-app"]}>
+          <UserProfile
+            isFollowing={isFollowing}
+            handleFollow={this.handleFollow}
+            userData={data}
+            handleModal={this.handleModal}
+          />
+          <TrackDescription
+            songData={data}
+          />
+          <ReportPage show={show} handleClose={this.handleModal} />
+        </div>
       </div>
     );
   }

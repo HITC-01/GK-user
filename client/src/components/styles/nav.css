@@ -1,6 +1,6 @@
-.header {
+.navHeader {
   width: 100%;
-  font: 100 14px/1.5 "Interstate","Lucida Grande",Arial,sans-serif;
+  font: 100 14px/1.5 "Overpass",sans-serif;
   background: #333;
   display: flex;
   justify-content: center;
@@ -14,22 +14,27 @@
   display: flex;
 }
 
-.left {
+.navLeft {
   display: flex;
   flex-direction: row;
 }
 
-.bl {
+.navBlock{
   padding: 12px 0;  
   width: 104px;
   height: 46px;
-  color:white;
+  color:#ccc;
   border-right: 1px solid #111;
   box-sizing: border-box;
   text-align: center;
 }
 
-.right {
+.navBlock:hover{
+  color:white
+}
+
+.navRight {
+  justify-content: flex-end;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -39,60 +44,22 @@
   text-align: center;
 }
 
-.center {
+.navCenter {
+  margin-left: 20px;
   display: flex;
   flex-direction: row;
   position: relative;
-  width: 50%;
   height: 46px;
   color:white;
   text-align: center;
 }
-.bc-search {
-  color: #666;
-  width: 95%;
-  outline: 0;
-  border: 0;
-  background: #e5e5e5;
-  text-align: center;
-  position: relative;
-}
 
-
-.search {
+.navSearch {
+  width: 300px;
   padding:8px;
   display:block;
   background: #e5e5e5;
   border:none;
   height: 31px;
-  width:100%;
   border-radius:8px
-}
-
-.fa-soundcloud {
-  font-size: 47px;
-  color: white;
-  background: #f50;
-}
-
-.fa-search {
-  font-size: 31px;
-  margin: 2px;
-  border: 1px;
-  border-radius: 20%;
-  color: black;
-  background: #e5e5e5;
-  padding: 7px;
-  position: relative;
-}
-
-.fa-user-circle {
-  font-size: 31px;
-  margin: 2px;
-  border: 1px;
-  border-radius: 20%;
-  color: black;
-  background: #e5e5e5;
-  padding: 7px;
-  position: relative;
 }

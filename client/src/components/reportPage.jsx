@@ -3,23 +3,23 @@ import PropTypes from 'prop-types';
 import styles from './styles/reportPage.css';
 
 const ReportPage = ({ handleClose, show }) => {
-  const marginStyle = { margin: '10px' };
-  const showHideClassName = show ? 'up-modalWrapper' : 'up-display-none';
+  const showHideClassName = show ? 'rpModalWrapper' : 'rpDisplayNone';
   const violations = ['Copyright Infringement', 'Privacy Violation', 'Pornographic Content', 'Abuse', 'Hate Speech', ' Illegal Content', 'Other'];
   const reportLinks = violations.map((violation) => {
     return (
-      <li className={styles["black"]} key={violation}>
-        {violation}
+      <li key={violation}>
+        <p className={styles.reportText}>
+          {violation}
+        </p>
       </li>
     );
   });
 
   return (
     <div className={styles[`${showHideClassName}`]}>
-      <div className={styles["up-modal"]}>
+      <div className={styles.rpModal}>
         <section style={{ margin: '4px' }}>
-          <h1 style={marginStyle}> Report Track For </h1>
-          <hr style={marginStyle} />
+          <h1 className={styles.rpHeader}> Report Track For </h1>
           <ul>
             {reportLinks}
           </ul>

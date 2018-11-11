@@ -9,8 +9,8 @@ const generator = () => {
     const details = {
       pro: `${faker.random.boolean()}`,
       isFollowing: `${faker.random.boolean()}`,
-      followers: faker.random.number({ min: 1, max: 600000 }),
-      trackCount: faker.random.number({ min: 1, max: 600000 }),
+      followers: faker.random.number({ min: 1, max: 500 }),
+      trackCount: faker.random.number({ min: 1, max: 500 }),
       userName: faker.name.findName(),
       profilePhoto: faker.image.avatar(),
       location: `${faker.address.city()}, ${faker.address.country()}`,

@@ -5,7 +5,7 @@ import styles from './styles/hashtag.css';
 const HashTag = ({ hash }) => {
   return (
     <div>
-      <span className={styles.hash}>
+      <span className={styles.upHash}>
       #
         {hash}
       </span>
