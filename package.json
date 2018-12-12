@@ -47,7 +47,6 @@
     "grunt-contrib-jshint": "^2.0.0",
     "grunt-s3": "^0.2.0-alpha.3",
     "jest": "^23.6.0",
-    "nodemon": "^1.18.4",
     "style-loader": "^0.23.1",
     "webpack": "^4.21.0",
     "webpack-cli": "^3.1.2"
