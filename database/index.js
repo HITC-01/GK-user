@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const connection = mysql.createPool({
-  host: 'hitc-user.catgvkx1a4hz.us-west-1.rds.amazonaws.com',
-  user: 'gkim',
+  host: 'localhost',
+  user: 'root',
   database: 'hitcuser',
-  password: 'HackReactor',
+  password: '',
 });
 
 connection.getConnection((err) => {
